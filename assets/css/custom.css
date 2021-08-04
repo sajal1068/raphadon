@@ -473,10 +473,12 @@ body.nav-up header {
 }
 
 .container-menu.bg {
-  background: #2B5C8C;
+  /* background: #2B5C8C;
   background: -webkit-radial-gradient(center, #2B5C8C, #131920);
   background: -moz-radial-gradient(center, #2B5C8C, #131920);
-  background: radial-gradient(ellipse at center, #2B5C8C, #131920);
+  background: radial-gradient(ellipse at center, #2B5C8C, #131920); */
+
+  background-image: linear-gradient(to bottom, #ec1946, #e61a46, #e11b45, #db1b45, #d61c44);
  
 }
 
@@ -496,6 +498,7 @@ body.nav-up header {
 .menu a {
   color: #ffffff;
   text-decoration: none;
+  line-height: 1;
 }
 
 .menu a:hover {
@@ -506,6 +509,8 @@ body.nav-up header {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  
 }
 
 .menu .menu-inner .social-links,
@@ -527,9 +532,9 @@ body.nav-up header {
 
 .menu-items .menu-title {
   color: white;
-  font-size: 1.3em;
+  font-size: 1.43em;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: flex;
   align-items: center;
   /*justify-content: space-evenly;*/
@@ -542,9 +547,9 @@ body.nav-up header {
 .menu-items li {
   font-family: goldenbook, serif;
   color: white;
-  font-size: 0.75em;
+  font-size: 0.95em;
   list-style-type: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: flex;
   align-items: center;
   /*justify-content: space-evenly;*/
@@ -2028,7 +2033,7 @@ figcaption,
   position: relative;
 }
 
-.moods-page article .circle {
+ .circle {
   border-radius: 50%;
   border: 2px dotted #412F21;
   margin: 0 auto;
