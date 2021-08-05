@@ -471,7 +471,6 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/anime.min.js"></script>
-    <!-- <script src="assets/js/custom.js"></script> -->
     
    
 
@@ -491,6 +490,11 @@
                $(".shape-wrap").addClass("horizontal");
                $(".menu-items").css("display", "flex");   
                $(".shape").css("transform-origin", "100% 0%"); 
+               $(".search-form").css("display", "none");
+               $(".container-menu").removeClass("active-search");
+               // $(".search-form").css("display", "none");
+               
+              
 
                anime({
                   targets: '.shape-wrap',
@@ -607,23 +611,23 @@
                $(".search-form").css("display", "block");
                $(".container-menu").addClass("active-search");                 
                $(".navbar-search").css("display", "none");  
-               $(".search-close").css("display", "inline-block");  
+               $(".search-close").css("display", "inline-block"); 
                
-
-
-            }else{   
                
+            }else if($(this).parent().hasClass("active-search")){       
+                     
+                    
+                     $(".navbar-search").css("display", "none");
+
+            }else{                 
                
                $(".navbar").addClass("active-search");               
                $(".navbar").removeClass("active");
                $(".search-form").css("display", "block");
                $(".shape-wrap").removeClass("horizontal");
-
-
                $(".container-menu").removeClass("active");
                $(".container-menu").removeClass("bg");
-               $(".container-menu").addClass("active-search");
-               
+               $(".container-menu").addClass("active-search");               
                $(".menu-items").css("display", "flex");   
                $(".shape").css("transform-origin", "100% 0%"); 
                anime({
@@ -660,6 +664,7 @@
                   opacity: "1"
                })             
                $(".shape-wrap").removeClass("horizontal");  
+              
             }
              
          });
@@ -669,11 +674,17 @@
 
 
          $(".search-close").on('click',function(e){
+
+            if($(this).parent().hasClass("active-search") ) { 
+
+
                $(".navbar").removeClass("active-search");               
                $(".navbar").removeClass("active");
                $(".shape-wrap").removeClass("horizontal");
                $(".container-menu").removeClass("active");
-               $(".container-menu").removeClass("bg");
+               $(".container-menu").removeClass("bg");              
+               $(".navbar-search").css("display","inline-block");
+               $(".search-close").css("display","none");
                anime({
                   targets: '.shape-wrap',
                   duration: 600,
@@ -701,8 +712,46 @@
                   easing: "easeInOutSine",                 
                   opacity: "0"
                })
+            }else{
+
+               $(".navbar").removeClass("active-search");               
+               $(".navbar").removeClass("active");
+               $(".shape-wrap").removeClass("horizontal");
+               $(".container-menu").removeClass("active");
+               $(".container-menu").removeClass("bg");
+               $(".menu-close").css("display","none");
+               $(".navbar-search").css("display","inline-block");
 
 
+
+               anime({
+                  targets: '.shape-wrap',
+                  duration: 600,
+                  easing: "easeInOutSine",
+                  height: "15vh"
+               }),anime({
+                  targets: '.shape',
+                  duration: 600,
+                  easing: "easeInOutSine",                 
+                  translateY: "-38vh",
+                  scale:1
+               }),anime({
+                  targets: '.container-menu',
+                  duration: 600,
+                  easing: "easeInOutSine",                 
+                  translateY: "0vh"
+               }),anime({
+                  targets: '.menu',
+                  duration: 600,
+                  easing: "easeInOutSine",                 
+                  translateY: "0vh"
+               }),anime({
+                  targets: '.menu-items .col',
+                  duration: 600,
+                  easing: "easeInOutSine",                 
+                  opacity: "0"
+               })
+            }
          });   
 
 
