@@ -3512,6 +3512,7 @@ figcaption,
   /* } */
   header .navbar {
     margin-top: 1.5rem;
+    margin-top: 10px;
   }
   #canvas,
   #canvas-white {
@@ -3539,6 +3540,7 @@ figcaption,
   }
   .navbar-logo {
     margin-left: 2rem;
+    margin-left: 0;
   }
   .navbar-logo img {
     width: 5rem;
@@ -3853,10 +3855,14 @@ figcaption,
   }
   .navbar-logo img {
     width: 6rem;
+    width: 180px;
   }
   .navbar-ico {
     margin-left: 2rem;
     margin-right: 0.5rem;
+
+    margin-left: 0.21rem;
+    margin-right: 0.25rem;
   }
   .navbar-ico img {
     width: 2.5rem;
@@ -4019,7 +4025,7 @@ footer .footer-title {
 }
 
 .m-30{
-  margin-top: -35px;
+  margin-top: -65px;
 }
 
 
