@@ -311,7 +311,10 @@ strong,
 
 .menu-items .link::before,
 .menu-items .link::after,
-.menu .secondary-menu .link::before,
+.menu 
+
+
+.link::before,
 .menu .secondary-menu .link::after {
   background: #ffffff;
 }
@@ -813,6 +816,7 @@ body.nav-up header {
 
 .secondary-menu {
   text-align: center;
+  margin-top:-41px;
 }
 
 .secondary-menu ul {
