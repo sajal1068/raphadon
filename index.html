@@ -544,7 +544,7 @@
     
    
 
-    <script>
+     <script>
  
    $(document).ready(function(){
 
@@ -553,7 +553,7 @@
          $(".navbar-menu").on('click',function(e){
             e.preventDefault();
             if(!$(this).parent().hasClass("active") && !$(this).parent().hasClass("active-search") ) {  
-
+               
                $(".navbar").addClass("active");
                $(".container-menu").addClass("active");
                $(".container-menu").addClass("bg");
@@ -563,7 +563,7 @@
                $(".search-form").css("display", "none");
                $(".container-menu").removeClass("active-search");
                // $(".search-form").css("display", "none");
-               
+               $('body').css('overflow', 'hidden');      
               
 
                anime({
@@ -616,6 +616,7 @@
                
             }else{
                 alert("no reacin");
+                $('body').css('overflow', 'auto');
             }
                          
          });
@@ -630,9 +631,10 @@
                $(".navbar").removeClass("active");
                $(".shape-wrap").removeClass("horizontal");
                $(".container-menu").removeClass("active");
+               
 
            }else{
-              
+               $('body').css('overflow', 'auto');
                $(".navbar").removeClass("active");
                $(".shape-wrap").removeClass("horizontal");
                $(".container-menu").removeClass("active");
@@ -682,6 +684,7 @@
                $(".container-menu").addClass("active-search");                 
                $(".navbar-search").css("display", "none");  
                $(".search-close").css("display", "inline-block"); 
+               $('body').css('overflow', 'hidden');
                
                
             }else if($(this).parent().hasClass("active-search")){       
@@ -746,7 +749,7 @@
          $(".search-close").on('click',function(e){
 
             if($(this).parent().hasClass("active-search") ) { 
-
+               $('body').css('overflow', 'auto'); 
 
                $(".navbar").removeClass("active-search");               
                $(".navbar").removeClass("active");
