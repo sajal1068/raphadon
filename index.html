@@ -544,7 +544,7 @@
     
    
 
-     <script>
+    <script>
  
    $(document).ready(function(){
 
@@ -631,10 +631,11 @@
                $(".navbar").removeClass("active");
                $(".shape-wrap").removeClass("horizontal");
                $(".container-menu").removeClass("active");
-               
+              
 
            }else{
-               $('body').css('overflow', 'auto');
+                $('body').css('overflow', 'auto');
+               
                $(".navbar").removeClass("active");
                $(".shape-wrap").removeClass("horizontal");
                $(".container-menu").removeClass("active");
@@ -677,7 +678,7 @@
          $(".navbar-search").on('click',function(e){
 
             if($(this).parent().hasClass("active")) { 
-
+               
                $(".navbar").addClass("active-search");
                $(".navbar").removeClass("active");
                $(".search-form").css("display", "block");
@@ -693,7 +694,7 @@
                      $(".navbar-search").css("display", "none");
 
             }else{                 
-               
+               $('body').css('overflow', 'hidden');
                $(".navbar").addClass("active-search");               
                $(".navbar").removeClass("active");
                $(".search-form").css("display", "block");
