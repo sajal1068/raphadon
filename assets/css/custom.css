@@ -311,10 +311,7 @@ strong,
 
 .menu-items .link::before,
 .menu-items .link::after,
-.menu 
-
-
-.link::before,
+.menu .secondary-menu .link::before,
 .menu .secondary-menu .link::after {
   background: #ffffff;
 }
@@ -816,7 +813,6 @@ body.nav-up header {
 
 .secondary-menu {
   text-align: center;
-  margin-top:-41px;
 }
 
 .secondary-menu ul {
@@ -3419,6 +3415,9 @@ figcaption,
   .navbar-ico {
     margin-left: 1rem;
     margin-right: 0.5rem;
+
+    margin-left: 0;
+    margin-right: -3px;
   }
   .navbar-ico img {
     width: 2rem;
@@ -3515,8 +3514,11 @@ figcaption,
     /*width: 45%;*/
   /* } */
   header .navbar {
-    margin-top: 1.5rem;
-    margin-top: 10px;
+    /* margin-top: 1.5rem;
+    margin-top: 10px; */
+
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
   #canvas,
   #canvas-white {
@@ -3544,10 +3546,12 @@ figcaption,
   }
   .navbar-logo {
     margin-left: 2rem;
+    margin-left: -8px;
     margin-left: 0;
   }
   .navbar-logo img {
     width: 5rem;
+    width: 145px;
   }
   .navbar-wave svg {
     height: 220px;
@@ -4029,7 +4033,7 @@ footer .footer-title {
 }
 
 .m-30{
-  margin-top: -95px;
+  margin-top: -65px;
 }
 
 
