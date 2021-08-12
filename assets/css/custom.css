@@ -3551,7 +3551,7 @@ figcaption,
   }
   .navbar-logo img {
     width: 5rem;
-    width: 145px;
+    width: 190px;
   }
   .navbar-wave svg {
     height: 220px;
@@ -3846,6 +3846,11 @@ figcaption,
     display: block;
     left: -5.5rem;
   }
+  
+  .navbar-logo img {
+    width: 6rem;
+    width: 199px;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -3863,7 +3868,7 @@ figcaption,
   }
   .navbar-logo img {
     width: 6rem;
-    width: 180px;
+    width: 199px;
   }
   .navbar-ico {
     margin-left: 2rem;
