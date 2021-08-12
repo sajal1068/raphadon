@@ -3847,9 +3847,12 @@ figcaption,
     left: -5.5rem;
   }
   
-  .navbar-logo img {
-    width: 6rem;
-    width: 199px;
+  .navbar-logo img {    
+    width: 174px;
+  }
+  .secondary-menu li {
+      color: white;
+      font-size: 0.81em;
   }
 }
 
