@@ -1020,6 +1020,7 @@ footer .footer-title-bigger {
 footer .footer-social-title {
   font-size: 1.3em;
   margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 footer .secondary-menu li {
@@ -1180,7 +1181,7 @@ footer .secondary-menu a:hover {
 
 .page-title,
 .page-title-secondary {
-  font-size: 4em;
+  font-size: 3em;
   /*font-size: $xl;*/
   text-transform: uppercase;
   margin-top: 1rem;
@@ -5674,5 +5675,36 @@ main.productdetaile {
   margin-top: 60px;
   /* display: grid;
   grid-template-columns: 1fr max-content; */
+}
+
+/* download button */
+.face-button {
+  height: 64px;
+  display: inline-block;
+  border: 3px solid #e43;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: #e43;
+  overflow: hidden;
+}
+.face-button .icon {
+  margin-right: 6px;
+}
+.face-button .face-primary,
+.face-button .face-secondary {
+  display: block;
+  padding: 0 32px;
+  line-height: 64px;
+  transition: margin 0.4s;
+}
+.face-button .face-primary {
+  background-color: #e43;
+  color: #fff;
+}
+.face-button:hover .face-primary {
+  margin-top: -64px;
 }
 
