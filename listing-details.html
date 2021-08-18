@@ -332,8 +332,30 @@
    </header>
 
    <!-- <section class="banner d-block">
-      <img src="assets/images/u.jpg"  class="img-fluid d-block w-100" alt="">
+      <img src="assets/images/title-bg.jpg"  class="img-fluid d-block w-100" alt="">
    </section> -->
+
+   <div class="breadcrumb-area mb-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="breadcrumb_box text-center">
+                      <h1 class="breadcrumb-title text-color-primary">Hip Joint</h1>
+                      <!-- breadcrumb-list start -->
+                      <ul class="breadcrumb-list">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="index.html">Artficial Limbs</a></li>
+                          <li class="breadcrumb-item"><a href="index.html">Prosthetic Services</a></li>
+                          <li class="breadcrumb-item"><a href="index.html">Lower Limb Prosthesis</a></li>
+                          <li class="breadcrumb-item active">Hip Joint</li>                        
+
+                      </ul>
+                      <!-- breadcrumb-list end -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
 
@@ -342,14 +364,27 @@
      <div class="container-fluid">
 
       
+
+      <!-- <div class="row">
+         <div class="col-sm-12">
+            <ul class="breadcrumb-custom bc2x">
+               <p></p>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Artficial Limbs/Prosthetic Services</a></li>
+               <li><a href="#">Lower Limb Prosthesis</a></li>
+               <li><a href="#">Hip Joint</a></li>
+               <li><a href="#">Hydraulic Hip Joint</a></li>
+             </ul>
+         </div>
+      </div> -->
          
      
         <div class="row">
            <div class="col-sm-12">
-            <div class="content-text">
-               <h2>PROPRIO FOOT</h2>
-               <h2>PROPRIO FOOT</h2>
-            </div>
+            <!-- <div class="content-text">
+               <h2>Hip Joint</h2>
+               <h2>Hip Joint</h2>
+            </div> -->
             <!-- <div class="main_title text-center mb-4"></div> -->
            </div>
             
@@ -360,9 +395,47 @@
               <img src="assets/images/p1.webp" class="img-fluid img_round_bg" alt="products">
            </div>
            <div class="col-sm-6  flex-column justify-content-start">
-            <h2 class="text-left mb-4">PROPRIO FOOT<sup>®</sup></h2>
-            <p>PROPRIO FOOT is an adaptive microprocessor controlled ankle for low to moderately active amputees, designed to improve safety by increasing toe clearance in swing phase and adapting to changing terrain.</p>
-            <a href="#" class="view_button">Request more information</a>
+            <h2 class="text-left mb-4">Mechanical Hip Joint<sup></sup></h2>
+            <table class="table borderless">
+               <tbody>
+                  <tr>
+                    <th scope="row">Name</th>
+                    <td>Hydraulic Hip Joint</td>                   
+                  </tr>
+                  <tr>
+                    <th scope="row">Product Code</th>
+                    <td>HHC</td>                   
+                  </tr>
+                  <tr>
+                    <th scope="row">Color</th>
+                    <td class="color_option">
+                        <div class='options'>
+                           <div class='color-options'>                        
+                              <div class='color-picker'>
+                                 <div class='color overlay' id='color-overlay'><div class='check'></div></div>
+                                 <div class='color color-a' id='color-a'></div>
+                                 <div class='color color-b' id='color-b'></div>
+                              </div>                               
+                           </div>                        
+                     </div>
+                    </td>
+                    
+                  </tr>
+                  <tr>
+                     <th scope="row">Brand</th>
+                     <td>Made in USA</td>                   
+                   </tr>
+                   <tr>
+                     <th scope="row">Availability</th>
+                     <td>AGAINST THE ORDER</td>                   
+                   </tr>
+                   <tr>
+                      <td></td>
+                      <td><a href="#" class="view_button">Request more information</a></td>
+                   </tr>
+                </tbody>
+            </table>
+            
            </div>
         </div>
         <div class="clearfix"></div>
@@ -373,14 +446,24 @@
 
             <div id="icetab-container">
                <div class="icetab current-tab">Overview</div>
-               <div class="icetab">Details</div>
+               <div class="icetab">Product info</div>
                    
             </div>
             
             <div id="icetab-content">
-               <div class="tabcontent tab-active">Tab1 <br>1 lorim ipsum</div> 
-                <div class="tabcontent">Tab2 <br>2 lorim ipsum</div>
-                
+               <div class="tabcontent tab-active">   
+                  <div class="h3 font-weight-bold mb-4 heading">Mechanical Hip Joint Overview</div> 
+                  <p>Helix3D 7E10 is the first hip joint with hydraulic stance- and swing-phase control. TheHelix3D provides pelvic rotation and a greater flexion angle, giving users more natural gait patterns and increased freedom of movement.</p>
+                  <p>The Helix's three-dimensional movement mimics the human hip joints natural and symmetrical gait pattern. Its polycentric design allows for leg length reduction during swing phase, which reduces the risk of falling and increases function.</p>
+                  <p>Because the hip joint offers a larger flexion angle of 130 degrees, it is easier to accomplish activities of daily living such as putting on shoes or getting into a car.</p>                  
+               </div> 
+               <div class="tabcontent">
+                  <div class="h3 font-weight-bold mb-4 heading">Product info</div>
+
+                     <p>Mechanical Hip Disarticulation Joint</p>
+                     <p>The lock design provide high stability and reliability</p>
+                  
+               </div>                
             </div> 
 
 
@@ -898,7 +981,25 @@ for(var index=0;index<tabs.length;index++){
 	tabs[index].addEventListener('click', myFunction, false);
 }
 
-        
+        // color menu
+
+        document.getElementById('color-a').addEventListener('click', function() {
+  document.getElementById('color-overlay').style.transform = 'translateX(-0.5px)';
+  document.getElementById('background-element').style.backgroundColor = '#333';
+  document.getElementById('highlight-overlay').style.opacity = '1';
+  document.getElementById('highlight-overlay-mobile').style.opacity = '1';
+  document.getElementById('color-name').innerHTML = "BLACK / 050";
+  document.getElementById('color-name').style.color = '#333'
+
+})
+document.getElementById('color-b').addEventListener('click', function() {
+  document.getElementById('color-overlay').style.transform = 'translateX(45px)';
+  document.getElementById('background-element').style.backgroundColor = '#457';
+  document.getElementById('highlight-overlay').style.opacity = '0';
+  document.getElementById('highlight-overlay-mobile').style.opacity = '0';
+  document.getElementById('color-name').innerHTML = "BLUES / 2V5";
+  document.getElementById('color-name').style.color = '#457'
+})
        </script>
   </body>
 </html>
