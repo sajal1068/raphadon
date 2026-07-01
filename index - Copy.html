@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphadon Global Healthcare | White & Red Edition</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Google Fonts: Inter Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Apply Font Family globally to layout -->
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            letter-spacing: -0.01em; /* Inter font ke headings ko premium look dene ke liye tracking subtle use karein */
+        }
+    </style>
+</head>
+<body class="bg-slate-50/50 text-slate-800 antialiased selection:bg-red-600 selection:text-white overflow-x-hidden">
+    
+    <!-- Premium Top Bar (Exactly as per image_586a31.png) -->
+    <div class="bg-[#031b33] text-slate-200 text-xs sm:text-[13px] py-3 px-4 sm:px-6 lg:px-8 border-b border-slate-800/60 font-medium">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
+            
+            <!-- Left Side: Tagline with Heart/Pulse Icon -->
+            <div class="flex items-center space-x-2.5">
+                <!-- Red Heart Pulse SVG Icon -->
+                <svg class="w-5 h-5 text-red-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12h2.25l1.5-2.25L14.25 15l1.5-3H18"></path>
+                </svg>
+                <span class="tracking-wide text-slate-100">Compassionate Care. Advanced Medicine. Healthier Hearts.</span>
+            </div>
+            
+            <!-- Right Side: Contact, Location & Social Handles -->
+            <div class="flex flex-wrap items-center justify-center md:justify-end gap-x-4 gap-y-2 text-slate-300">
+                <!-- Phone -->
+                <a href="tel:+2349023850034" class="flex items-center space-x-1.5 hover:text-white transition-colors">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <span>(212) 555-7890</span>
+                </a>
+                
+                <!-- Divider -->
+                <span class="text-slate-600 hidden sm:inline">|</span>
+                
+                <!-- Location -->
+                <div class="flex items-center space-x-1.5">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>150 East 58th St, New York, NY 10155</span>
+                </div>
+
+                <!-- Divider -->
+                <span class="text-slate-600 hidden sm:inline">|</span>
+
+                <!-- Social Links -->
+                <div class="flex items-center space-x-3 ml-1">
+                    <!-- Facebook -->
+                    <a href="#" class="hover:text-red-500 transition-colors">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" class="hover:text-red-500 transition-colors">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" class="hover:text-red-500 transition-colors">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Ambient Red Glowing Background Objects for "Wow" Factor (Soft Light Mode) -->
+    <div class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-red-500/5 to-rose-500/5 rounded-full blur-[140px] -z-10 pointer-events-none"></div>
+    <div class="absolute top-[500px] left-10 w-[400px] h-[400px] bg-gradient-to-br from-orange-400/5 to-red-600/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 shadow-xs">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <!-- Creative Logo with Red Combo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-rose-500 flex items-center justify-center shadow-md shadow-red-600/20">
+                    <span class="text-white font-black text-xl">R</span>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-slate-900">RAPHADON<span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-500">GLOBAL</span></span>
+            </div>
+            
+            <!-- Desktop Nav Menu with Red Hover Effect -->
+            <nav class="hidden lg:flex items-center space-x-10 font-semibold text-sm tracking-wide text-slate-600">
+                <a href="#" class="text-red-600 relative after:absolute after:bottom-[-6px] after:left-0 after:w-5 after:h-[2px] after:bg-red-600">Home</a>
+                <a href="#" class="hover:text-slate-950 transition-colors">About Us</a>
+                <a href="#" class="hover:text-slate-950 transition-colors">Bionic Prosthetics</a>
+                <a href="#" class="hover:text-slate-950 transition-colors">Medical Tourism</a>
+                <a href="#" class="hover:text-slate-950 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Premium Red Glow CTA Button -->
+            <div class="flex items-center">
+                <a href="#" class="relative group overflow-hidden bg-gradient-to-r from-red-600 to-rose-500 text-white text-sm font-bold px-6 py-3 rounded-xl transition-all shadow-md shadow-red-600/10 hover:shadow-red-600/30 hover:scale-[1.02]">
+                    <span class="relative z-10">Get Consultation</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+     <!-- Full Width Premium Swiper Slider Section -->
+    <section class="w-full relative bg-slate-900 overflow-hidden">
+        <div class="swiper mainHeroSwiper w-full min-h-[500px] sm:min-h-[650px]">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1: Bionic Technology -->
+                <div class="swiper-slide relative bg-gradient-to-br from-[#0c1322] via-[#141d30] to-[#070b14] flex items-center justify-center py-20">
+                    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full z-10">
+                        <div class="lg:col-span-7 space-y-6 text-left">
+                            <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full text-xs font-bold bg-red-500/10 text-red-400 border border-red-500/20 uppercase tracking-widest">
+                                Premium Technology
+                            </span>
+                            <h2 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight">
+                                Restoring Motion. <br>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-orange-400">Empowering Life.</span>
+                            </h2>
+                            <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
+                                Experience the future of advanced multi-axis bionic prosthetics custom-designed to match your biological movement seamlessly.
+                            </p>
+                            <div class="pt-4 flex gap-4">
+                                <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-red-600/30">Explore Bionics</a>
+                                <a href="#" class="bg-white/10 hover:bg-white/20 text-white border border-white/10 font-medium px-6 py-3.5 rounded-xl transition-all backdrop-blur-md">View Systems</a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 flex justify-center relative">
+                            <div class="text-9xl filter drop-shadow-[0_0_35px_rgba(239,68,68,0.25)] animate-bounce [animation-duration:3s]">🦾</div>
+                            <div class="absolute w-56 h-56 border border-dashed border-red-500/20 rounded-full -z-10 animate-spin [animation-duration:20s]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Orthotic Solutions -->
+                <div class="swiper-slide relative bg-gradient-to-br from-[#100b16] via-[#1c1226] to-[#09050d] flex items-center justify-center py-20">
+                    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full z-10">
+                        <div class="lg:col-span-7 space-y-6 text-left">
+                            <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full text-xs font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20 uppercase tracking-widest">
+                                Clinical Precision
+                            </span>
+                            <h2 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight">
+                                Orthotic Corrective <br>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-400">Spinal Braces.</span>
+                            </h2>
+                            <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
+                                Engineered supports for perfect structural stabilization, posture restoration, and supreme comfortable daily wear.
+                            </p>
+                            <div class="pt-4">
+                                <a href="#" class="bg-rose-600 hover:bg-rose-700 text-white font-bold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-rose-600/30">View All Braces</a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 flex justify-center relative">
+                            <div class="text-9xl filter drop-shadow-[0_0_35px_rgba(244,63,94,0.25)]">🦿</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Medical Tourism -->
+                <div class="swiper-slide relative bg-gradient-to-br from-[#051412] via-[#0b2622] to-[#020d0b] flex items-center justify-center py-20">
+                    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full z-10">
+                        <div class="lg:col-span-7 space-y-6 text-left">
+                            <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase tracking-widest">
+                                Global Concierge
+                            </span>
+                            <h2 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight">
+                                Seamless Medical <br>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Travel Tourism.</span>
+                            </h2>
+                            <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
+                                Directly connected with multi-specialty elite hospitals in India to secure affordable wellness infrastructure.
+                            </p>
+                            <div class="pt-4">
+                                <a href="#" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-600/30">Plan Your Journey</a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 flex justify-center relative">
+                            <div class="text-9xl filter drop-shadow-[0_0_35px_rgba(16,185,129,0.25)]">✈️</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Swiper Navigation Controls -->
+            <div class="swiper-button-next hidden md:flex"></div>
+            <div class="swiper-button-prev hidden md:flex"></div>
+            
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination !bottom-6"></div>
+        </div>
+    </section>
+
+
+    <!-- Creative "Welcome to Raphadon" Introduction & Expertise Section -->
+<section class="relative py-24 bg-white overflow-hidden">
+    <!-- Subtle Background Graphics -->
+    <div class="absolute top-1/2 left-0 w-72 h-72 bg-red-500/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            
+            <!-- Left Column: Visionary Introduction Copy -->
+            <div class="lg:col-span-6 space-y-6">
+                <div class="inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full text-xs font-bold bg-red-50 text-red-600 border border-red-100 uppercase tracking-wider">
+                    🌐 Global Reputation
+                </div>
+                
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
+                    Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-500">Raphadon</span> <br>
+                    Global Healthcare
+                </h2>
+                
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+                    Based in Abuja, Nigeria, Raphadon enjoys a global reputation for high-tier healthcare innovations. We specialize in the creation, development, manufacture, and marketing of a wide variety of medical and rehabilitation solutions.
+                </p>
+                
+                <p class="text-sm text-slate-500 leading-relaxed">
+                    By merging engineering precision with clinical excellence, our focus revolves around delivering state-of-the-art prosthetic ecosystems that help individuals rediscover seamless, comfortable mobility.
+                </p>
+
+                <!-- Core Creative Expertise Badges Array -->
+                <div class="pt-6 space-y-4">
+                    <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-widest">Our Medical Verticals</h4>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="bg-slate-50 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl border border-slate-100 shadow-xs hover:border-red-200 transition-colors flex items-center gap-2">🦾 Latest Bionic Tech</span>
+                        <span class="bg-slate-50 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl border border-slate-100 shadow-xs hover:border-red-200 transition-colors flex items-center gap-2">🖖 Silicon Cosmetic Restoration</span>
+                        <span class="bg-slate-50 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl border border-slate-100 shadow-xs hover:border-red-200 transition-colors flex items-center gap-2">👣 Diabetic Foot Care</span>
+                        <span class="bg-slate-50 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl border border-slate-100 shadow-xs hover:border-red-200 transition-colors flex items-center gap-2">🩺 Hi-Tech Orthotics</span>
+                        <span class="bg-slate-50 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl border border-slate-100 shadow-xs hover:border-red-200 transition-colors flex items-center gap-2">✈️ World-Class Medical Tourism</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Asymmetric Structural Feature Blocks -->
+            <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:mt-4">
+                
+                <!-- Joint Indo-Global Management Card -->
+                <div class="p-8 rounded-3xl bg-slate-900 text-white space-y-4 shadow-xl sm:translate-y-6 transition-transform duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-red-500/20 text-red-400 flex items-center justify-center text-xl font-bold">🇮🇳</div>
+                    <h3 class="text-xl font-bold tracking-tight">Indo-Global Expertise</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Jointly owned and managed by a highly experienced group of professional clinical specialists from India and other countries.
+                    </p>
+                    <div class="h-1 w-12 bg-red-500 rounded-full"></div>
+                </div>
+
+                <!-- Perfection Crafted Card -->
+                <div class="p-8 rounded-3xl bg-white border border-slate-100 space-y-4 shadow-md transition-transform duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl">🎯</div>
+                    <h3 class="text-xl font-bold tracking-tight text-slate-900">Striving For Perfection</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Our specialists are perfect at what they do, striving hard to bring out exceptional performance and structural longevity in each design.
+                    </p>
+                    <div class="h-1 w-12 bg-rose-500 rounded-full"></div>
+                </div>
+
+                <!-- Manufacturing Supremacy Card -->
+                <div class="p-8 rounded-3xl bg-white border border-slate-100 space-y-4 shadow-md transition-transform duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl">🏭</div>
+                    <h3 class="text-xl font-bold tracking-tight text-slate-900">In-House Production</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        End-to-end execution covering assembly lines, custom calibration, and pristine marketing of high-grade implants.
+                    </p>
+                    <div class="h-1 w-12 bg-orange-50 rounded-full"></div>
+                </div>
+
+                <!-- Premium Global Imports Card -->
+                <div class="p-8 rounded-3xl bg-gradient-to-br from-red-600 to-rose-500 text-white space-y-4 shadow-lg sm:translate-y-6 transition-transform duration-300 hover:translate-y-5">
+                    <div class="w-12 h-12 rounded-2xl bg-white/20 text-white flex items-center justify-center text-xl">📦</div>
+                    <h3 class="text-xl font-bold tracking-tight">Imported Systems</h3>
+                    <p class="text-xs text-red-50 leading-relaxed">
+                        Direct procurement pipelines importing premier grade prosthetic components and carbon-fiber bionic solutions globally.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-1 text-xs font-bold tracking-wider uppercase text-white/90 hover:text-white pt-2">
+                        View Imports <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Ultra-Creative & Immersive "Welcome to Raphadon" Experience Section -->
+<section class="relative py-28 bg-white overflow-hidden border-b border-slate-100">
+    
+    <!-- Decorative Tech Mesh & Light Gradients -->
+    <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-bl from-red-500/5 to-rose-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-slate-50 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <!-- Left Grid: Brand Narrative & Timeline-based Flow -->
+            <div class="lg:col-span-6 space-y-8">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-xl text-xs font-bold bg-slate-950 text-white tracking-widest uppercase">
+                        Establishing Mobility
+                    </span>
+                    <h2 class="text-4xl sm:text-6xl font-black text-slate-950 tracking-tight leading-[1.05]">
+                        Welcome to <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-500 to-orange-500">Raphadon Global</span>
+                    </h2>
+                </div>
+
+                <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                    Based in Abuja, Nigeria, Raphadon enjoys a stellar global reputation. We orchestrate the full lifecycle—creation, development, manufacture, and market deployment—of cutting-edge medical and rehabilitation ecosystems.
+                </p>
+
+                <!-- Process/Feature Step Blocks -->
+                <div class="space-y-6 pt-4 relative before:absolute before:top-2 before:left-6 before:bottom-2 before:w-[2px] before:bg-slate-100">
+                    
+                    <!-- Feature Step 1 -->
+                    <div class="flex items-start space-x-6 relative group">
+                        <div class="w-12 h-12 rounded-xl bg-white border-2 border-red-600 flex items-center justify-center shrink-0 shadow-md group-hover:bg-red-600 group-hover:text-white transition-all z-10">
+                            <span class="text-xs font-extrabold font-mono">01</span>
+                        </div>
+                        <div class="space-y-1">
+                            <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">Indo-Global Corporate Synergy</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Jointly owned and managed by elite professional clinical specialists from India and other countries, bringing absolute operational mastery.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature Step 2 -->
+                    <div class="flex items-start space-x-6 relative group">
+                        <div class="w-12 h-12 rounded-xl bg-white border-2 border-slate-900 flex items-center justify-center shrink-0 shadow-md group-hover:bg-slate-950 group-hover:text-white transition-all z-10">
+                            <span class="text-xs font-extrabold font-mono">02</span>
+                        </div>
+                        <div class="space-y-1">
+                            <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">The Pursuit of Absolute Perfection</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Our engineers strive hard to extract maximum mechanical efficiency, guaranteeing that every single customized layout meets global metrics.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Grid: High-Tech Interactive Ecosystem Widget Layout (The "Wow" Element) -->
+            <div class="lg:col-span-6 relative">
+                
+                <!-- Main Glass Dashboard Frame -->
+                <div class="relative bg-gradient-to-tr from-slate-950 to-slate-900 text-white p-8 sm:p-10 rounded-[3rem] shadow-2xl overflow-hidden group">
+                    <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-red-600/10 rounded-full blur-3xl group-hover:bg-red-600/20 transition-colors duration-500"></div>
+
+                    <!-- Dashboard Inner Header -->
+                    <div class="flex justify-between items-center pb-8 border-b border-slate-800">
+                        <div>
+                            <span class="text-[10px] font-mono tracking-widest text-red-500 uppercase font-bold block mb-1">Ecosystem Portfolio</span>
+                            <h3 class="text-xl font-bold text-white tracking-tight">Active Core Verticals</h3>
+                        </div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                    </div>
+
+                    <!-- Grid Layout of Specialized Micro-Cards inside Dashboard -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8">
+                        
+                        <!-- Micro-Card 1 -->
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800/80 hover:border-red-500/30 transition-all group/item">
+                            <span class="text-2xl block mb-3">🦾</span>
+                            <h5 class="font-bold text-white text-sm mb-1 group-hover/item:text-red-400 transition-colors">Latest Bionic Tech</h5>
+                            <p class="text-slate-400 text-xs leading-relaxed">Advanced upper/lower extremities with muscle signal mapping.</p>
+                        </div>
+
+                        <!-- Micro-Card 2 -->
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800/80 hover:border-rose-500/30 transition-all group/item">
+                            <span class="text-2xl block mb-3">🖖</span>
+                            <h5 class="font-bold text-white text-sm mb-1 group-hover/item:text-rose-400 transition-colors">Cosmetic Prosthesis</h5>
+                            <p class="text-slate-400 text-xs leading-relaxed">Custom micro-sculpted silicone systems mirroring organic aesthetic skin layers.</p>
+                        </div>
+
+                        <!-- Micro-Card 3 -->
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800/80 hover:border-orange-500/30 transition-all group/item">
+                            <span class="text-2xl block mb-3">👣</span>
+                            <h5 class="font-bold text-white text-sm mb-1 group-hover/item:text-orange-400 transition-colors">Diabetic Foot Care</h5>
+                            <p class="text-slate-400 text-xs leading-relaxed">Tailored orthotic offloading solutions built explicitly for active pressure relief.</p>
+                        </div>
+
+                        <!-- Micro-Card 4 -->
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800/80 hover:border-emerald-500/30 transition-all group/item">
+                            <span class="text-2xl block mb-3">✈️</span>
+                            <h5 class="font-bold text-white text-sm mb-1 group-hover/item:text-emerald-400 transition-colors">Medical Tourism</h5>
+                            <p class="text-slate-400 text-xs leading-relaxed">Direct concierge tracking routing users straight to premium hospitals in India.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Integrated Brand Stamp -->
+                    <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                        <p class="text-slate-400 font-medium">✨ Imported Limbs, Orthosis & Prosthetic Craftsmanship</p>
+                        <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-xl transition-all shadow-md tracking-wide shrink-0">
+                            View All Solutions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Abstract Decorative Floating Overlay Elements -->
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-tr from-red-600 to-rose-500 rounded-2xl -z-10 opacity-20 rotate-12 blur-xs"></div>
+                <div class="absolute -bottom-6 left-12 bg-white border border-slate-100 rounded-xl px-4 py-3 shadow-xl flex items-center space-x-2.5">
+                    <div class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></div>
+                    <span class="text-xs font-bold text-slate-900 uppercase tracking-wider">Abuja HQ Deployment</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Ultra-Creative "Raphadon Group's Objective & Global Network" Section -->
+<section class="relative py-28 bg-slate-50/60 overflow-hidden border-b border-slate-100">
+    
+    <!-- Ambient Red Neon Glows for Creative Visual Depth -->
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-br from-red-500/10 to-transparent rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-12 left-10 w-72 h-72 bg-gradient-to-tr from-rose-500/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <!-- Left Column: The Core Objective & Innovation Triggers -->
+            <div class="lg:col-span-6 space-y-8">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-xl text-xs font-bold bg-red-50 text-red-600 border border-red-100 uppercase tracking-widest">
+                        🎯 Our Driving Purpose
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
+                        Helping Differently-Abled <br>
+                        People Live a <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 inside to-rose-500">Normal, Better Life.</span>
+                    </h2>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+                    At Raphadon, we fuse deep human empathy with sophisticated modern engineering. Our team focuses relentlessly on empowering individuals to achieve true independence using state-of-the-art mobility technologies.
+                </p>
+
+                <!-- Creative Nations Import Framework Block -->
+                <div class="p-6 rounded-3xl bg-white border border-slate-100 shadow-xs space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-xl">🌐</span>
+                        <h4 class="font-bold text-slate-900 text-sm tracking-tight">Global Innovation Pipelines & Imports</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        We actively join hands with highly reputed research brands all over the world to import premium medical equipment and systems from leading tech nations:
+                    </p>
+                    
+                    <!-- Asymmetric Nation Pill Tags -->
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-50 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-100 hover:border-red-500/20 transition-colors">🇺🇸 United States</span>
+                        <span class="bg-slate-50 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-100 hover:border-red-500/20 transition-colors">🇬🇧 United Kingdom</span>
+                        <span class="bg-slate-50 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-100 hover:border-red-500/20 transition-colors">🇩🇪 Germany</span>
+                        <span class="bg-slate-50 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-100 hover:border-red-500/20 transition-colors">🇯🇵 Japan</span>
+                        <span class="bg-slate-50 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-100 hover:border-red-500/20 transition-colors">🇮🇳 India</span>
+                        <span class="bg-slate-50 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-100 hover:border-red-500/20 transition-colors">🇫🇷 France</span>
+                        <span class="bg-slate-50 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-100 hover:border-red-500/20 transition-colors">🇮🇹 Italy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Medical Tourism Premium Interactive Map Widget (The "Wow" Element) -->
+            <div class="lg:col-span-6 relative">
+                
+                <!-- Main Core Tech Tourism Card Container -->
+                <div class="relative bg-gradient-to-b from-slate-950 to-slate-900 text-white p-8 sm:p-10 rounded-[2.5rem] shadow-2xl overflow-hidden group">
+                    <!-- Subtle Tech Background Grid Lines Simulator -->
+                    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"></div>
+
+                    <!-- Inner Card Header -->
+                    <div class="relative z-10 flex items-start justify-between pb-6 border-b border-slate-800/80">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono font-bold tracking-widest text-red-500 uppercase block">Global Network Highlights</span>
+                            <h3 class="text-2xl font-black text-white tracking-tight">Advanced Medical Tourism</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center text-lg animate-pulse">✈️</div>
+                    </div>
+
+                    <!-- Immersive Core Concept Statement Panels -->
+                    <div class="relative z-10 space-y-6 pt-8">
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            We operate as a key stakeholder within an elite global network that offers high-tier healthcare and seamless medical tourism facilities around the world.
+                        </p>
+
+                        <!-- The Two-Way Structural Value Matrix -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            
+                            <!-- Matrix Value Box 1 -->
+                            <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-red-500/30 transition-colors">
+                                <span class="text-xl block mb-2">💎</span>
+                                <h5 class="font-bold text-white text-sm mb-1">Affordable Excellence</h5>
+                                <p class="text-slate-400 text-xs leading-relaxed">Securing cost-effective wellness treatments in India and other high-tier clinical hubs globally.</p>
+                            </div>
+
+                            <!-- Matrix Value Box 2 -->
+                            <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-rose-500/30 transition-colors">
+                                <span class="text-xl block mb-2">🛡️</span>
+                                <h5 class="font-bold text-white text-sm mb-1">Elite Cross-Border Logistics</h5>
+                                <p class="text-slate-400 text-xs leading-relaxed">End-to-end global coordination managing clinical appointments, visas, and complete recovery tracks.</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Action Bar inside Widget -->
+                        <div class="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <span class="text-xs text-slate-500 font-medium font-mono">Status: Global Corridors Operational</span>
+                            <a href="#" class="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase bg-white text-slate-950 px-5 py-3 rounded-xl hover:bg-slate-100 transition-colors group shrink-0">
+                                Access Global Portal <span class="group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Subtle Decorative Floating Geometry -->
+                <div class="absolute -bottom-6 -left-6 bg-white border border-slate-100 rounded-2xl p-4 shadow-xl flex items-center space-x-3 max-w-xs z-20">
+                    <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                    <span class="text-xs font-bold text-slate-900 tracking-tight">Direct Tie-ups with Elite Hospitals</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- =========================================================================
+     ULTRA-CREATIVE INTEGRATED SECTION: WELCOME & OBJECTIVE CORRIDOR
+     ========================================================================= -->
+<section class="relative py-28 bg-white overflow-hidden border-b border-slate-100">
+    
+    <!-- Ambient Red & Light Gray Neon Radiance Blobs -->
+    <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-bl from-red-500/5 to-rose-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 left-10 w-96 h-96 bg-slate-50 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-red-500/5 to-transparent rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative space-y-32">
+        
+        <!-- BLOCK 1: Welcome to Raphadon Narrative -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <!-- Left Side: Brand Vision & Flow State -->
+            <div class="lg:col-span-6 space-y-8">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-xl text-xs font-bold bg-slate-950 text-white tracking-widest uppercase">
+                        Establishing Mobility
+                    </span>
+                    <h2 class="text-4xl sm:text-6xl font-black text-slate-950 tracking-tight leading-[1.05]">
+                        Welcome to <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-500 to-orange-500">Raphadon Global</span>
+                    </h2>
+                </div>
+
+                <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                    Based in Abuja, Nigeria, Raphadon enjoys a stellar global reputation. We orchestrate the full lifecycle—creation, development, manufacture, and market deployment—of cutting-edge medical and rehabilitation health care products.
+                </p>
+
+                <!-- Stepper Process Timelines -->
+                <div class="space-y-6 pt-4 relative before:absolute before:top-2 before:left-6 before:bottom-2 before:w-[2px] before:bg-slate-100">
+                    
+                    <!-- Feature Step 1 -->
+                    <div class="flex items-start space-x-6 relative group">
+                        <div class="w-12 h-12 rounded-xl bg-white border-2 border-red-600 flex items-center justify-center shrink-0 shadow-md group-hover:bg-red-600 group-hover:text-white transition-all z-10">
+                            <span class="text-xs font-extrabold font-mono">01</span>
+                        </div>
+                        <div class="space-y-1">
+                            <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">Indo-Global Synergy</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Jointly owned and managed by elite professional clinical specialists from India and other countries, bringing absolute operational mastery.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature Step 2 -->
+                    <div class="flex items-start space-x-6 relative group">
+                        <div class="w-12 h-12 rounded-xl bg-white border-2 border-slate-900 flex items-center justify-center shrink-0 shadow-md group-hover:bg-slate-950 group-hover:text-white transition-all z-10">
+                            <span class="text-xs font-extrabold font-mono">02</span>
+                        </div>
+                        <div class="space-y-1">
+                            <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">Striving for Absolute Perfection</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Our specialists are perfect at what they do, striving hard to extract maximum mechanical efficiency and structural longevity in each design.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Side: Active Vertical Dashboard Controls (Interactive Graphic View) -->
+            <div class="lg:col-span-6 relative">
+                <div class="relative bg-gradient-to-tr from-slate-950 to-slate-900 text-white p-8 sm:p-10 rounded-[3rem] shadow-2xl overflow-hidden group">
+                    <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-red-600/10 rounded-full blur-3xl group-hover:bg-red-600/20 transition-colors duration-500"></div>
+
+                    <!-- Widget Header -->
+                    <div class="flex justify-between items-center pb-8 border-b border-slate-800">
+                        <div>
+                            <span class="text-[10px] font-mono tracking-widest text-red-500 uppercase font-bold block mb-1">Ecosystem Portfolio</span>
+                            <h3 class="text-xl font-bold text-white tracking-tight">Active Core Verticals</h3>
+                        </div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                    </div>
+
+                    <!-- Mini Categories Array Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8">
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800/80 hover:border-red-500/30 transition-all group/item">
+                            <span class="text-2xl block mb-3">🦾</span>
+                            <h5 class="font-bold text-white text-sm mb-1 group-hover/item:text-red-400 transition-colors">Latest Bionic Tech</h5>
+                            <p class="text-slate-400 text-xs leading-relaxed">Advanced upper/lower extremities with muscle signal mapping.</p>
+                        </div>
+
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800/80 hover:border-rose-500/30 transition-all group/item">
+                            <span class="text-2xl block mb-3">🖖</span>
+                            <h5 class="font-bold text-white text-sm mb-1 group-hover/item:text-rose-400 transition-colors">Cosmetic Prosthesis</h5>
+                            <p class="text-slate-400 text-xs leading-relaxed">Custom micro-sculpted silicone systems mirroring organic skin layers.</p>
+                        </div>
+
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800/80 hover:border-orange-500/30 transition-all group/item">
+                            <span class="text-2xl block mb-3">👣</span>
+                            <h5 class="font-bold text-white text-sm mb-1 group-hover/item:text-orange-400 transition-colors">Diabetic Foot Care</h5>
+                            <p class="text-slate-400 text-xs leading-relaxed">Tailored orthotic offloading solutions built explicitly for active relief.</p>
+                        </div>
+
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800/80 hover:border-emerald-500/30 transition-all group/item">
+                            <span class="text-2xl block mb-3">🦴</span>
+                            <h5 class="font-bold text-white text-sm mb-1 group-hover/item:text-emerald-400 transition-colors">Orthopedics & Orthosis</h5>
+                            <p class="text-slate-400 text-xs leading-relaxed">Sophisticated spinal alignment structures and artificial limbs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Widget Footnote Status -->
+                    <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-400 font-medium">
+                        ✨ Imported Limbs, Orthosis & Prosthetic Production Line.
+                    </div>
+                </div>
+
+                <!-- Abstract Base Geometry -->
+                <div class="absolute -bottom-6 left-12 bg-white border border-slate-100 rounded-xl px-4 py-3 shadow-xl flex items-center space-x-2.5">
+                    <div class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></div>
+                    <span class="text-xs font-bold text-slate-900 uppercase tracking-wider">Abuja HQ Deployment</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOCK 2: Raphadon Group's Strategic Objective -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center pt-12">
+            
+            <!-- Left Side: Interactive Global Matrix Display (Medical Tourism & Import Grid) -->
+            <div class="lg:col-span-6 relative order-last lg:order-first">
+                <div class="relative bg-gradient-to-b from-slate-950 to-slate-900 text-white p-8 sm:p-10 rounded-[2.5rem] shadow-2xl overflow-hidden group">
+                    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] mask-image:[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"></div>
+
+                    <!-- Module Header -->
+                    <div class="relative z-10 flex items-start justify-between pb-6 border-b border-slate-800/80">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono font-bold tracking-widest text-red-500 uppercase block">Global Network Highlights</span>
+                            <h3 class="text-2xl font-black text-white tracking-tight">Advanced Medical Tourism</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center text-lg">✈️</div>
+                    </div>
+
+                    <!-- Inner Metrics Matrix -->
+                    <div class="relative z-10 space-y-6 pt-8">
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            We operate as a key stakeholder within an elite global network that offers advanced medical tourism facilities around the world.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-red-500/30 transition-colors">
+                                <span class="text-xl block mb-2">💎</span>
+                                <h5 class="font-bold text-white text-sm mb-1">Affordable Excellence</h5>
+                                <p class="text-slate-400 text-xs leading-relaxed">Bringing high-quality wellness treatments within premium corridors like India seamlessly.</p>
+                            </div>
+
+                            <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 hover:border-rose-500/30 transition-colors">
+                                <span class="text-xl block mb-2">🛡️</span>
+                                <h5 class="font-bold text-white text-sm mb-1">Cross-Border Logistics</h5>
+                                <p class="text-slate-400 text-xs leading-relaxed">End-to-end management covering elite clinical scheduling and post-treatment tracking.</p>
+                            </div>
+                        </div>
+
+                        <!-- Action Triggers -->
+                        <div class="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <span class="text-xs text-slate-500 font-medium font-mono">Status: Corridors Operational</span>
+                            <a href="#" class="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase bg-white text-slate-950 px-5 py-3 rounded-xl hover:bg-slate-100 transition-colors group shrink-0">
+                                Access Global Network <span class="group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Bottom Badge -->
+                <div class="absolute -bottom-6 -right-6 bg-white border border-slate-100 rounded-2xl p-4 shadow-xl flex items-center space-x-3 max-w-xs z-20">
+                    <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                    <span class="text-xs font-bold text-slate-900 tracking-tight">Direct Ties with Multi-Specialty Clinics</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Objective Statements & Imported Pipeline Logistics -->
+            <div class="lg:col-span-6 space-y-8">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-xl text-xs font-bold bg-red-50 text-red-600 border border-red-100 uppercase tracking-widest">
+                        🎯 Our Driving Purpose
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
+                        Helping Differently-Abled <br>
+                        People Live a <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-500">Normal, Better Life.</span>
+                    </h2>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+                    The focal core of the team at Raphadon is to combine innovation and latest technology to engineer complete biological freedom with sophisticated frameworks.
+                </p>
+
+                <!-- Premium Imported Logistics Showcase Box -->
+                <div class="p-6 rounded-3xl bg-slate-50 border border-slate-100 shadow-xs space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-xl">🗺️</span>
+                        <h4 class="font-bold text-slate-900 text-sm tracking-tight">Procurement Pipelines & Global Equipment Imports</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        We maintain strategic alliances with top-tier international brands to monitor and import specialized rehabilitation components from premier industrial nations:
+                    </p>
+                    
+                    <!-- Modern Nation Micro-Badges -->
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="bg-white text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200/60 hover:border-red-500/20 transition-colors">🇺🇸 US</span>
+                        <span class="bg-white text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200/60 hover:border-red-500/20 transition-colors">🇬🇧 UK</span>
+                        <span class="bg-white text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200/60 hover:border-red-500/20 transition-colors">🇩🇪 Germany</span>
+                        <span class="bg-white text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200/60 hover:border-red-500/20 transition-colors">🇯🇵 Japan</span>
+                        <span class="bg-white text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200/60 hover:border-red-500/20 transition-colors">🇮🇳 India</span>
+                        <span class="bg-white text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200/60 hover:border-red-500/20 transition-colors">🇫🇷 France</span>
+                        <span class="bg-white text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200/60 hover:border-red-500/20 transition-colors">🇮🇹 Italy</span>
+                    </div>
+                </div>
+
+                <!-- Global Read More Trigger link -->
+                <div class="pt-2">
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-red-600 hover:text-red-700 transition-colors group">
+                        READ MORE ABOUT OUR OBJECTIVE 
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Creative Hero Section -->
+    <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-36 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <!-- Left Creative Content Grid -->
+            <div class="lg:col-span-6 space-y-8 relative">
+                <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full text-xs font-bold bg-red-50 text-red-600 border border-red-100 tracking-wider uppercase">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                    </span>
+                    Next-Gen Rehabilitation
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-black text-slate-950 tracking-tight leading-[1.1]">
+                    Restoring Motion. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-500 to-orange-500">Empowering Life.</span>
+                </h1>
+                
+                <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+                    We bridge the gap between advanced global bionic technology and premium prosthetic rehabilitation, delivering bespoke healthcare craftsmanship designed to move you forward.
+                </p>
+
+                <!-- Interactive Dual CTA -->
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#" class="bg-slate-950 text-white font-bold px-8 py-4 rounded-xl hover:bg-slate-900 transition-all flex items-center gap-2 group shadow-lg">
+                        Explore Tech Center
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="#" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-medium px-8 py-4 rounded-xl transition-all shadow-xs">
+                        Watch Success Stories
+                    </a>
+                </div>
+
+                <!-- Subtle Trust Counter Grid -->
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 max-w-md">
+                    <div>
+                        <p class="text-3xl font-extrabold text-slate-950">99%</p>
+                        <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider mt-1">Mobility Match</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-extrabold text-slate-950">15+</p>
+                        <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider mt-1">Global Tech Partners</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-extrabold text-slate-950">24/7</p>
+                        <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider mt-1">Clinical Support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Asymmetric Tech Widget with Premium White & Red Contrast -->
+            <div class="lg:col-span-6 relative">
+                <div class="relative bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-2xl overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    
+                    <div class="flex justify-between items-start mb-12">
+                        <div class="space-y-1">
+                            <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Active Preset</span>
+                            <h3 class="text-xl font-bold text-slate-950">Bionic Multi-Axis Hand</h3>
+                        </div>
+                        <span class="bg-red-50 text-red-600 font-bold text-xs px-3 py-1 rounded-md border border-red-100">Active Link Connected</span>
+                    </div>
+
+                    <!-- Modern Product Display Simulator -->
+                    <div class="relative h-64 bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-center p-6 group-hover:border-red-500/20 transition-colors">
+                        <!-- Abstract Glowing Red Vector Frame -->
+                        <div class="absolute w-48 h-48 border border-dashed border-red-500/20 rounded-full animate-spin [animation-duration:25s]"></div>
+                        
+                        <div class="relative z-10 text-center space-y-3">
+                            <div class="text-5xl drop-shadow-md">🦾</div>
+                            <p class="text-xs font-mono text-red-600 tracking-widest uppercase font-semibold">Prosthetic Module Alpha-8</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-100 text-sm">
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <span class="text-xs text-slate-400 block mb-0.5">Material Composition</span>
+                            <span class="font-semibold text-slate-700">Carbon Fiber / Titanium</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <span class="text-xs text-slate-400 block mb-0.5">Control System</span>
+                            <span class="font-semibold text-slate-700">Myoelectric Sensors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Premium Badge -->
+                <div class="absolute -bottom-6 -left-6 bg-white border border-slate-100 p-4 rounded-2xl shadow-xl flex items-center space-x-3 max-w-xs">
+                    <div class="w-10 h-10 bg-red-50 text-red-600 rounded-lg flex items-center justify-center text-lg font-bold">✓</div>
+                    <div>
+                        <p class="text-xs text-slate-400">Certified Medical Care</p>
+                        <p class="text-sm font-bold text-slate-950">FDA & CE Approved Systems</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Creative Grid Product/Services Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24 relative border-t border-slate-100">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="space-y-4">
+                <span class="text-xs font-bold text-red-600 tracking-widest uppercase block">Our Specializations</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">Engineered for Brisk Movement</h2>
+            </div>
+            <p class="text-slate-500 max-w-md text-sm leading-relaxed">
+                By maintaining a direct line of collaboration with cutting-edge laboratories worldwide, we supply robust custom prosthetic engineering.
+            </p>
+        </div>
+
+        <!-- Dynamic Grid Layout with Clean Card Design & Red Accents -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Box 1 -->
+            <div class="group relative bg-white p-8 rounded-3xl border border-slate-100 hover:border-red-500/30 transition-all duration-300 shadow-xs flex flex-col justify-between h-80 hover:shadow-lg">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center text-xl font-bold group-hover:bg-red-600 group-hover:text-white transition-colors">01</div>
+                    <h3 class="text-xl font-bold text-slate-950 tracking-tight">Prosthetic Solutions</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Advanced upper and lower bionic limb attachments mapped meticulously to muscle sensor pathways.</p>
+                </div>
+                <a href="#" class="text-xs font-bold tracking-wider uppercase text-red-600 group-hover:text-red-700 flex items-center gap-1 transition-colors pt-4">
+                    Explore Ecosystem <span>→</span>
+                </a>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="group relative bg-white p-8 rounded-3xl border border-slate-100 hover:border-rose-500/30 transition-all duration-300 shadow-xs flex flex-col justify-between h-80 hover:shadow-lg">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center text-xl font-bold group-hover:bg-rose-600 group-hover:text-white transition-colors">02</div>
+                    <h3 class="text-xl font-bold text-slate-950 tracking-tight">Orthotic Corrective Supports</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">High-performance custom spinal braces, specialized corrective splints, and diabetic posture adjustments.</p>
+                </div>
+                <a href="#" class="text-xs font-bold tracking-wider uppercase text-rose-600 group-hover:text-rose-700 flex items-center gap-1 transition-colors pt-4">
+                    Explore Ecosystem <span>→</span>
+                </a>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="group relative bg-white p-8 rounded-3xl border border-slate-100 hover:border-orange-500/30 transition-all duration-300 shadow-xs flex flex-col justify-between h-80 hover:shadow-lg">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center text-xl font-bold group-hover:bg-orange-600 group-hover:text-white transition-colors">03</div>
+                    <h3 class="text-xl font-bold text-slate-950 tracking-tight">Medical Travel & Tourism</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Seamless global concierge links routing patients straight to high-tier multi-specialty hospitals in India.</p>
+                </div>
+                <a href="#" class="text-xs font-bold tracking-wider uppercase text-orange-600 group-hover:text-orange-700 flex items-center gap-1 transition-colors pt-4">
+                    Explore Ecosystem <span>→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+<!-- =========================================================================
+     ULTRA-CREATIVE TESTIMONIAL TECH HUB WITH SWIPER
+     ========================================================================= -->
+<section class="relative py-28 bg-white overflow-hidden border-b border-slate-100">
+    
+    <!-- Sophisticated Abstract Mesh Backdrop -->
+    <div class="absolute top-1/4 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-red-500/5 to-transparent rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-0 right-10 w-80 h-80 bg-slate-50 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <!-- Left Side Grid: Telemetry Stats & Brand Impact Statement -->
+            <div class="lg:col-span-5 space-y-8">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-xl text-xs font-bold bg-red-50 text-red-600 border border-red-100 uppercase tracking-widest">
+                        🗣️ Verified Impact
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
+                        Stories of <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-500">Regained Freedom.</span>
+                    </h2>
+                </div>
+
+                <p class="text-base text-slate-600 leading-relaxed font-medium">
+                    Mobility restore karna sirf hamara task nahi, hamara vision hai. Un differently-abled logo ki real journey dekhiye jinki life Raphadon systems se change hui hai.
+                </p>
+
+                <!-- Interactive Floating Stat Counter Metric -->
+                <div class="p-6 rounded-3xl bg-slate-50 border border-slate-100 flex items-center space-x-6 shadow-xs relative overflow-hidden group">
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-red-500/5 rounded-full blur-xl group-hover:bg-red-500/10 transition-colors"></div>
+                    <div class="w-14 h-14 bg-red-600 rounded-2xl flex flex-col items-center justify-center font-bold text-white shadow-md text-xl shrink-0">99%</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-0.5">Patient Satisfaction Ratio</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Brisk movement framework tracking delivers optimal everyday alignment metrics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Grid: Highly Creative Interactive Dashboard Swiper Slider Section -->
+            <div class="lg:col-span-7 relative">
+                
+                <!-- Main Glass Dashboard Frame Box Container -->
+                <div class="relative bg-gradient-to-tr from-slate-950 to-slate-900 text-white p-8 sm:p-12 rounded-[3rem] shadow-2xl overflow-hidden group/board">
+                    <!-- Tech Canvas Grid Lines Graphic Effect Background -->
+                    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] mask-image:[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
+                    
+                    <!-- Decorative Red Pulse Aura -->
+                    <div class="absolute -top-24 -left-24 w-64 h-64 bg-red-600/10 rounded-full blur-3xl"></div>
+
+                    <!-- Testimonial Slider Wrapper -->
+                    <div class="swiper creativeTestimonialSwiper w-full relative z-10">
+                        <div class="swiper-wrapper">
+                            
+                            <!-- Slide Item 1 -->
+                            <div class="swiper-slide space-y-8">
+                                <div class="text-red-500 font-serif text-6xl leading-none select-none">“</div>
+                                <blockquote class="text-lg sm:text-xl font-medium text-slate-100 leading-relaxed italic">
+                                    "Raphadon has helped me to live a better life. It has made my movement brisk and more comfortable. In summary, Raphadon has truly made my life normal again."
+                                </blockquote>
+                                <div class="pt-6 border-t border-slate-800 flex items-center justify-between gap-4 flex-wrap">
+                                    <div class="flex items-center space-x-3.5">
+                                        <div class="w-12 h-12 bg-red-500/20 text-red-400 font-black rounded-xl border border-red-500/30 flex items-center justify-center text-sm shadow-sm">AO</div>
+                                        <div>
+                                            <h5 class="font-bold text-white text-sm">Avognon Omoniyi</h5>
+                                            <p class="text-[11px] font-mono font-semibold text-red-400 uppercase tracking-wider mt-0.5">Oyo State, Nigeria</p>
+                                        </div>
+                                    </div>
+                                    <span class="bg-slate-900 px-3 py-1 rounded-md text-[10px] font-mono text-slate-500 border border-slate-800">Verified Mobility Track</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide Item 2 -->
+                            <div class="swiper-slide space-y-8">
+                                <div class="text-rose-500 font-serif text-6xl leading-none select-none">“</div>
+                                <blockquote class="text-lg sm:text-xl font-medium text-slate-100 leading-relaxed italic">
+                                    "The team of professional clinical specialists from India handled my custom bionic prosthesis setup with outstanding perfection. Absolute precision at its absolute best."
+                                </blockquote>
+                                <div class="pt-6 border-t border-slate-800 flex items-center justify-between gap-4 flex-wrap">
+                                    <div class="flex items-center space-x-3.5">
+                                        <div class="w-12 h-12 bg-slate-800 text-white font-black rounded-xl border border-slate-700 flex items-center justify-center text-sm shadow-sm">EK</div>
+                                        <div>
+                                            <h5 class="font-bold text-white text-sm">Emmanuel Kwesi</h5>
+                                            <p class="text-[11px] font-mono font-semibold text-slate-400 uppercase tracking-wider mt-0.5">Abuja HQ Patient</p>
+                                        </div>
+                                    </div>
+                                    <span class="bg-slate-900 px-3 py-1 rounded-md text-[10px] font-mono text-slate-500 border border-slate-800">Verified Bionic Track</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide Item 3 -->
+                            <div class="swiper-slide space-y-8">
+                                <div class="text-orange-500 font-serif text-6xl leading-none select-none">“</div>
+                                <blockquote class="text-lg sm:text-xl font-medium text-slate-100 leading-relaxed italic">
+                                    "Their global network managed my complete medical tourism tracking seamlessly. Affordable treatment rates paired with exceptional international grade clinical guidance."
+                                </blockquote>
+                                <div class="pt-6 border-t border-slate-800 flex items-center justify-between gap-4 flex-wrap">
+                                    <div class="flex items-center space-x-3.5">
+                                        <div class="w-12 h-12 bg-rose-500/10 text-rose-400 font-black rounded-xl border border-rose-500/20 flex items-center justify-center text-sm shadow-sm">FB</div>
+                                        <div>
+                                            <h5 class="font-bold text-white text-sm">Fatima Bello</h5>
+                                            <p class="text-[11px] font-mono font-semibold text-rose-400 uppercase tracking-wider mt-0.5">Medical Tourism Client</p>
+                                        </div>
+                                    </div>
+                                    <span class="bg-slate-900 px-3 py-1 rounded-md text-[10px] font-mono text-slate-500 border border-slate-800">Verified Logistics Track</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <!-- Mini Dot Pagination Inside Card Widget -->
+                        <div class="swiper-pagination !bottom-auto pt-8 relative flex justify-start"></div>
+                    </div>
+
+                    <!-- External Control Triggers Positioned over Framework -->
+                    <div class="absolute bottom-8 right-8 flex space-x-2 z-20">
+                        <button class="custom-prev bg-slate-900 hover:bg-slate-800 border border-slate-800 text-red-500 w-10 h-10 rounded-xl flex items-center justify-center transition-all cursor-pointer text-sm font-bold">←</button>
+                        <button class="custom-next bg-slate-900 hover:bg-slate-800 border border-slate-800 text-red-500 w-10 h-10 rounded-xl flex items-center justify-center transition-all cursor-pointer text-sm font-bold">→</button>
+                    </div>
+
+                </div>
+
+                <!-- Abstract Base Geometry Component Badge -->
+                <div class="absolute -bottom-6 -left-6 bg-white border border-slate-100 rounded-2xl p-4 shadow-xl flex items-center space-x-3 z-20">
+                    <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                    <span class="text-xs font-bold text-slate-900 tracking-tight">Real Patients Feedback Tracking</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Include this Initialize Script block at the footer of your file -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const creativeTestimonialSwiper = new Swiper('.creativeTestimonialSwiper', {
+            loop: true,
+            speed: 700,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.custom-next',
+                prevEl: '.custom-prev',
+            },
+        });
+    });
+</script>
+
+    <!-- Footer Area -->
+    <footer class="bg-slate-950 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-xs space-y-4 sm:space-y-0">
+            <p>&copy; 2026 Raphadon Global Healthcare Limited. White & Crimson Edition.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Security Rules</a>
+                <a href="#" class="hover:text-white transition-colors">Patient Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- =========================================================================
+     ULTRA-CREATIVE & PREMIUM REDESIGNED FOOTER SECTION
+     ========================================================================= -->
+<footer class="bg-white border-t border-slate-100 relative overflow-hidden pt-20 pb-8 text-slate-600">
+    
+    <!-- Subtle Ambient Glow Object (Red/Rose tint for creative premium vibe) -->
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tr from-red-500/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-0 left-10 w-64 h-64 bg-slate-50 rounded-full blur-2xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <!-- TOP ROW: Actionable Contact Quick Connect Widgets -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12 border-b border-slate-100">
+            
+            <!-- Call Us Widget Box -->
+            <div class="flex items-center space-x-5 p-6 rounded-2xl bg-slate-50 border border-slate-100/80 hover:border-red-500/20 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-600 flex items-center justify-center text-xl font-bold group-hover:bg-red-600 group-hover:text-white transition-all shadow-xs">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M21 16.5c0 .38-.21.71-.53.88l-4.5 2.25c-.27.13-.59.11-.85-.06l-3.5-2.5c-.23-.16-.37-.43-.37-.71V14.1c-2.43-.87-4.33-2.77-5.2-5.2h2.26c.28 0 .55-.14.71-.37l2.5-3.5c.17-.26.19-.58.06-.85l-2.25-4.5C9.21 3.21 8.88 3 8.5 3H4.5C3.67 3 3 3.67 3 4.5C3 13.61 10.39 21 19.5 21c.83 0 1.5-.67 1.5-1.5v-3z"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xs font-mono font-bold uppercase text-slate-400 block mb-0.5 tracking-wider">Call Us</span>
+                    <a href="tel:+2349023850034" class="text-lg font-extrabold text-slate-950 hover:text-red-600 transition-colors tracking-tight">+234 90238 50034</a>
+                </div>
+            </div>
+
+            <!-- Mail Us Widget Box -->
+            <div class="flex items-center space-x-5 p-6 rounded-2xl bg-slate-50 border border-slate-100/80 hover:border-red-500/20 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-600 flex items-center justify-center text-xl font-bold group-hover:bg-red-600 group-hover:text-white transition-all shadow-xs">
+                    <svg class="w-5 h-5 fill-none stroke-currentColor stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xs font-mono font-bold uppercase text-slate-400 block mb-0.5 tracking-wider">Mail Us</span>
+                    <a href="mailto:support@raphadon.org" class="text-lg font-extrabold text-slate-950 hover:text-red-600 transition-colors tracking-tight">support@raphadon.org</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MIDDLE ROW: Core Content Informational Nav Grids -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 pt-16 pb-16">
+            
+            <!-- Column 1: Quick Links (3/12 Space) -->
+            <div class="lg:col-span-3 space-y-5">
+                <h4 class="text-sm font-black uppercase text-red-600 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-600">
+                    Quick Links
+                </h4>
+                <ul class="space-y-3 pt-2 text-sm font-semibold text-slate-600">
+                    <li><a href="#" class="hover:text-red-600 transition-colors flex items-center gap-1.5">Home</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors flex items-center gap-1.5">About us</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors flex items-center gap-1.5">Testimonials</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors flex items-center gap-1.5">Medical Tourism</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors flex items-center gap-1.5">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Our Products & Downloads (4/12 Space) -->
+            <div class="lg:col-span-4 space-y-6">
+                <h4 class="text-sm font-black uppercase text-red-600 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-600">
+                    Our Products
+                </h4>
+                <ul class="space-y-3 pt-2 text-sm font-semibold text-slate-600">
+                    <li><a href="#" class="hover:text-red-600 transition-colors">Artificial Limbs / Prosthetic Services</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors">Braces and Splints / Orthotic Services</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors">Silicone Prosthesis / Cosmetic Restoration</a></li>
+                    <li><a href="#" class="hover:text-red-600 transition-colors">Diabetic Foot Care / Foot Care Services</a></li>
+                </ul>
+                
+                <!-- Premium Highlighted Downloads CTA Button -->
+                <div class="pt-2">
+                    <a href="#" class="inline-flex items-center space-x-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider px-5 py-3.5 rounded-xl transition-all shadow-md shadow-red-600/10 hover:shadow-red-600/20 group">
+                        <svg class="w-4 h-4 fill-none stroke-currentColor stroke-width="2.5" viewBox="0 0 24 24" class="group-hover:translate-y-0.5 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        <span>Downloads Portfolio</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 3: Contact Details (3/12 Space) -->
+            <div class="lg:col-span-3 space-y-5">
+                <h4 class="text-sm font-black uppercase text-red-600 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-600">
+                    Contact Us
+                </h4>
+                <div class="pt-2 text-xs sm:text-sm font-medium text-slate-500 space-y-3.5 leading-relaxed">
+                    <p class="text-slate-700 font-bold">Raphadon Global Healthcare Limited,</p>
+                    <p>Amma House, Plot 432, Ground Floor, Opp National Hospital, Yakubu J Pam Street, Central Business District, Abuja, Nigeria.</p>
+                    <p class="font-semibold text-slate-950">📞 +234 90238 50034</p>
+                    <p class="font-semibold text-slate-950">✉️ info@raphadon.org</p>
+                </div>
+            </div>
+
+            <!-- Column 4: Social media & Locations Vector (2/12 Space) -->
+            <div class="lg:col-span-2 space-y-6">
+                <div>
+                    <h4 class="text-sm font-black uppercase text-red-600 tracking-widest block mb-4">Follow Us On</h4>
+                    <!-- Premium Styled Circle Social Anchors -->
+                    <div class="flex items-center space-x-2.5">
+                        <a href="#" class="w-9 h-9 bg-slate-100 hover:bg-red-600 hover:text-white text-slate-600 rounded-full flex items-center justify-center transition-all text-sm font-bold shadow-xs">f</a>
+                        <a href="#" class="w-9 h-9 bg-slate-100 hover:bg-red-600 hover:text-white text-slate-600 rounded-full flex items-center justify-center transition-all text-sm font-bold shadow-xs">t</a>
+                        <a href="#" class="w-9 h-9 bg-slate-100 hover:bg-red-600 hover:text-white text-slate-600 rounded-full flex items-center justify-center transition-all text-sm font-bold shadow-xs">yt</a>
+                        <a href="#" class="w-9 h-9 bg-slate-100 hover:bg-red-600 hover:text-white text-slate-600 rounded-full flex items-center justify-center transition-all text-sm font-bold shadow-xs">in</a>
+                    </div>
+                </div>
+
+                <!-- Locations Pill Matrix Sub-block -->
+                <div class="space-y-3 pt-2">
+                    <h5 class="text-xs font-extrabold text-slate-900 uppercase tracking-wider">Our Locations:</h5>
+                    <div class="text-[11px] font-bold text-slate-500 leading-relaxed flex flex-wrap gap-x-2 gap-y-1">
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Lagos</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Abia</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Adamawa</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Akwa Ibom</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Anambra</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Bauchi</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Bayelsa</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Benue</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Borno</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Cross River</span><span class="text-slate-300">|</span>
+                        <span class="hover:text-red-600 transition-colors cursor-pointer">Delta</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM ROW: Copyright Stamp Bar -->
+        <div class="pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 font-medium space-y-3 sm:space-y-0">
+            <p>&copy; 2026 Raphadon Global Healthcare Limited. All Rights Reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-slate-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-600 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- =========================================================================
+     EYE-FRIENDLY PREMIUM FOOTER WITH FONT AWESOME ICONS
+     ========================================================================= -->
+<footer class="bg-[#121824] text-slate-400 border-t border-slate-800/60 relative overflow-hidden pt-24 pb-8">
+    
+    <!-- Soft Red Ambient Tech Glow -->
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-red-600/5 to-transparent rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-0 left-12 w-64 h-64 bg-slate-900/20 rounded-full blur-2xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <!-- TOP ROW: Actionable Contact Cards (White Text / Soft Surface on Dark Slate) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12 border-b border-slate-800/50">
+            
+            <!-- Call Us Box -->
+            <div class="flex items-center space-x-5 p-6 rounded-2xl bg-[#1a2333]/60 border border-slate-800/50 hover:border-red-500/30 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-lg group-hover:bg-red-600 group-hover:text-white transition-colors duration-300 shadow-xs">
+                    <!-- Font Awesome Phone Icon -->
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-mono font-bold uppercase text-slate-500 block mb-0.5 tracking-wider">Call Us</span>
+                    <a href="tel:+2349023850034" class="text-lg font-extrabold text-white hover:text-red-400 transition-colors tracking-tight">+234 90238 50034</a>
+                </div>
+            </div>
+
+            <!-- Mail Us Box -->
+            <div class="flex items-center space-x-5 p-6 rounded-2xl bg-[#1a2333]/60 border border-slate-800/50 hover:border-red-500/30 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-lg group-hover:bg-red-600 group-hover:text-white transition-colors duration-300 shadow-xs">
+                    <!-- Font Awesome Envelope Icon -->
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-mono font-bold uppercase text-slate-500 block mb-0.5 tracking-wider">Mail Us</span>
+                    <a href="mailto:support@raphadon.org" class="text-lg font-extrabold text-white hover:text-red-400 transition-colors tracking-tight">support@raphadon.org</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MIDDLE ROW: Informational Navigation Matrix -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 pt-16 pb-16">
+            
+            <!-- Column 1: Quick Links -->
+            <div class="lg:col-span-3 space-y-5">
+                <h4 class="text-xs font-extrabold uppercase text-red-400 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-400">
+                    Quick Links
+                </h4>
+                <ul class="space-y-3 pt-3 text-sm font-semibold text-slate-400">
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> Home</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> About us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> Testimonials</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> Medical Tourism</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Our Products -->
+            <div class="lg:col-span-4 space-y-6">
+                <h4 class="text-xs font-extrabold uppercase text-red-400 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-400">
+                    Our Products
+                </h4>
+                <ul class="space-y-3 pt-3 text-sm font-semibold text-slate-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Artificial Limbs / Prosthetic Services</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Braces and Splints / Orthotic Services</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Silicone Prosthesis / Cosmetic Restoration</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Diabetic Foot Care / Foot Care Services</a></li>
+                </ul>
+                
+                <!-- Downloads Portfolio Button -->
+                <div class="pt-2">
+                    <a href="#" class="inline-flex items-center space-x-3 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold text-xs uppercase tracking-wider px-5 py-3.5 rounded-xl transition-all shadow-md group">
+                        <!-- Font Awesome Download Icon -->
+                        <i class="fa-solid fa-arrow-down-to-line group-hover:translate-y-0.5 transition-transform"></i>
+                        <span>Downloads Portfolio</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 3: Contact Details -->
+            <div class="lg:col-span-3 space-y-5">
+                <h4 class="text-xs font-extrabold uppercase text-red-400 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-400">
+                    Contact Us
+                </h4>
+                <div class="pt-3 text-xs sm:text-sm font-medium text-slate-400 space-y-4 leading-relaxed">
+                    <p class="text-white font-extrabold">Raphadon Global Healthcare Limited,</p>
+                    <div class="flex items-start space-x-2.5 text-slate-500">
+                        <!-- Font Awesome Location Dot Icon -->
+                        <i class="fa-solid fa-location-dot mt-1 text-slate-600 shrink-0"></i>
+                        <p class="font-medium">Amma House, Plot 432, Ground Floor, Opp National Hospital, Yakubu J Pam Street, Central Business District, Abuja, Nigeria.</p>
+                    </div>
+                    <p class="font-bold text-zinc-300 flex items-center gap-2"><i class="fa-solid fa-phone text-xs text-slate-500"></i> +234 90238 50034</p>
+                    <p class="font-bold text-zinc-300 flex items-center gap-2"><i class="fa-solid fa-envelope text-xs text-slate-500"></i> info@raphadon.org</p>
+                </div>
+            </div>
+
+            <!-- Column 4: Social Accounts & Locations Matrix -->
+            <div class="lg:col-span-2 space-y-6">
+                <div>
+                    <h4 class="text-xs font-extrabold uppercase text-red-400 tracking-widest block mb-4">Follow Us On</h4>
+                    <div class="flex items-center space-x-2">
+                        <!-- Font Awesome Social Icons -->
+                        <a href="#" class="w-9 h-9 bg-[#1a2333] hover:bg-red-600 text-slate-300 hover:text-white rounded-full flex items-center justify-center transition-all text-sm border border-slate-800/40"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 bg-[#1a2333] hover:bg-red-600 text-slate-300 hover:text-white rounded-full flex items-center justify-center transition-all text-sm border border-slate-800/40"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-9 h-9 bg-[#1a2333] hover:bg-red-600 text-slate-300 hover:text-white rounded-full flex items-center justify-center transition-all text-sm border border-slate-800/40"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="w-9 h-9 bg-[#1a2333] hover:bg-red-600 text-slate-300 hover:text-white rounded-full flex items-center justify-center transition-all text-sm border border-slate-800/40"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Strategic Pill Locations Array -->
+                <div class="space-y-3 pt-2">
+                    <h5 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider flex items-center gap-1"><i class="fa-solid fa-map text-[10px] text-red-400"></i> Our Locations:</h5>
+                    <div class="text-[11px] font-bold text-slate-500 leading-relaxed flex flex-wrap gap-x-2 gap-y-1">
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Lagos</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Abia</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Adamawa</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Akwa Ibom</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Anambra</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Bauchi</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Bayelsa</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Benue</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Borno</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Cross River</span><span class="text-slate-800">|</span>
+                        <span class="hover:text-red-400 transition-colors cursor-pointer">Delta</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM FOOTER NOTE: Trademark-Synced Copyright Stamp Bar -->
+        <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 font-medium space-y-3 sm:space-y-0">
+            <p>&copy; 2026 Raphadon Global Healthcare Limited. <span class="text-slate-600 font-normal">helps to live better&reg;</span></p>
+            <div class="flex space-x-6 text-slate-500 font-semibold">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+     <!-- Swiper JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.mainHeroSwiper', {
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+</html>
