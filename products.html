@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphadon Global Healthcare </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="assets/js/app.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.01em;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50/50 text-slate-800 antialiased selection:bg-red-600 selection:text-white overflow-x-hidden">
+
+
+    <div class="w-full font-medium text-sm bg-[#031b33]">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-stretch justify-between min-h-[52px] gap-4">
+
+            <div class="flex items-center justify-center md:justify-start py-2.5 md:py-0">
+                <div
+                    class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-xs font-semibold tracking-wide text-slate-300">
+                    <a href="#" class="hover:text-red-400 transition-colors py-1 flex items-center gap-1.5">Get A
+                        Quote</a>
+                    <span class="text-slate-700 font-normal">|</span>
+                    <a href="#" class="hover:text-red-400 transition-colors py-1">Track Order</a>
+                    <span class="text-slate-700 font-normal">|</span>
+                    <a href="#" class="hover:text-red-400 transition-colors py-1">Photos</a>
+                    <span class="text-slate-700 font-normal">|</span>
+                    <a href="#" class="hover:text-red-400 transition-colors py-1">Videos</a>
+                    <span class="text-slate-700 font-normal">|</span>
+                    <a href="#" class="hover:text-red-400 transition-colors py-1">Testimonials</a>
+                    <span class="text-slate-700 font-normal">|</span>
+                    <a href="#" class="hover:text-red-400 transition-colors py-1">Downloads</a>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center md:justify-end py-2 md:py-0 shrink-0 min-w-[280px]">
+                <div class="relative w-full max-w-[260px] group">
+                    <input type="text" placeholder="Enter Keyword to Search..."
+                        class="w-full bg-slate-900/50 text-slate-100 placeholder-slate-400 text-xs pl-4 pr-10 py-2 rounded-lg border border-slate-200/20 hover:border-red-500/60  focus:outline-hidden transition-all font-semibold shadow-xs" />
+                    <button type="submit"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-700 hover:text-red-600 transition-colors cursor-pointer text-xs font-bold">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full relative">
+        <!-- MAIN VISIBLE HEADER MATRIX -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-100 shadow-xs">
+            <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+
+                <!-- Brand Logo Frame (High-Visibility Constraints) -->
+                <div class="flex items-center shrink-0">
+                    <a href="#" class="block">
+                        <img src="assets/images/logo.png" alt="Raphadon Logo"
+                            class="h-14 sm:h-16 w-auto object-contain max-w-[180px] sm:max-w-[220px]" />
+                    </a>
+                </div>
+
+                <!-- Clean Micro Navigation Links Layout (Keeps layout clean) -->
+                <nav class="hidden md:flex items-center space-x-10 font-bold text-sm tracking-wide text-slate-600">
+                    <a href="#"
+                        class="text-red-600 relative after:absolute after:bottom-[-6px] after:left-0 after:w-5 after:h-[2px] after:bg-red-600 py-2">Home</a>
+                    <a href="#" class="hover:text-slate-950 transition-colors py-2">Medical Tourism</a>
+                    <a href="#" class="hover:text-slate-950 transition-colors py-2">Contact Us</a>
+                </nav>
+
+                <!-- Right-Side Call Actions & Corporate Menu Button -->
+                <div class="flex items-center space-x-5 shrink-0">
+                    <a href="#"
+                        class="hidden sm:inline-flex relative overflow-hidden bg-[#031b33] hover:bg-[#021426] text-white text-xs font-bold uppercase tracking-wider px-5 py-3.5 rounded-xl transition-all shadow-md">
+                        Get Consultation
+                    </a>
+
+                    <!-- Core Global Hamburger Trigger Component (Drives Content Drawer) -->
+                    <button id="globalMenuBtn"
+                        class="w-12 h-12 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200/80 flex items-center justify-center text-slate-900 transition-all cursor-pointer group relative"
+                        aria-label="Open Navigation Directory">
+                        <div class="space-y-1.5">
+                            <span
+                                class="block w-5 h-0.5 bg-slate-950 group-hover:w-6 transition-all duration-300"></span>
+                            <span class="block w-6 h-0.5 bg-slate-950"></span>
+                            <span
+                                class="block w-4 h-0.5 bg-slate-950 group-hover:w-6 transition-all duration-300"></span>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- =========================================================================
+         THE COMPLETE COMPREHENSIVE OVERLAY DIRECTORY DRAWER (Slides from Right)
+         ========================================================================= -->
+        <div id="globalDirectoryDrawer"
+            class="fixed inset-y-0 right-0 w-full max-w-md bg-white border-l border-slate-100 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between">
+
+            <!-- Drawer Header Module -->
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <div class="space-y-0.5">
+                    <span class="text-xs font-mono font-bold uppercase text-red-600 tracking-wider block">Clinical
+                        Directory</span>
+                    <h3 class="text-sm font-black text-slate-900 uppercase tracking-tight">Explore Services & Range</h3>
+                </div>
+                <button id="closeDirectoryBtn"
+                    class="w-10 h-10 rounded-xl bg-white border border-slate-200/60 flex items-center justify-center text-slate-400 hover:text-red-600 cursor-pointer transition-colors shadow-xs">
+                    <i class="fa-solid fa-xmark text-base"></i>
+                </button>
+            </div>
+
+            <!-- Scrollable Navigation Framework Matrix -->
+            <div class="flex-grow overflow-y-auto px-6 py-6 space-y-4 font-bold text-[15px] text-slate-800">
+
+                <!-- Base Link -->
+                <a href="#" class="block py-2.5 text-red-600 border-b border-slate-50">Home</a>
+
+                <!-- Category Block 1: Prosthetics -->
+                <div class="space-y-1">
+                    <button
+                        class="drawer-accordion-btn w-full flex items-center justify-between py-2.5 border-b border-slate-50 hover:text-red-600 cursor-pointer text-left font-bold text-[15px]">
+                        <span class="flex items-center gap-2.5"><i
+                                class="fa-solid fa-hand-virtual text-slate-400 text-sm w-4 text-center"></i>Artificial
+                            Limbs & Prosthetics</span>
+                        <i
+                            class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div
+                        class="drawer-accordion-panel hidden pl-6 pt-1.5 space-y-1 text-sm text-slate-500 font-semibold border-l-2 border-slate-100">
+                        <a href="#" class="block py-2.5 hover:text-slate-950 transition-colors">Lower Limb
+                            Prosthesis</a>
+                        <a href="#" class="block py-2.5 hover:text-slate-950 transition-colors">Upper Limb
+                            Prosthesis</a>
+                        <a href="#" class="block py-2.5 hover:text-slate-950 transition-colors">Bionic Technology
+                            Prosthesis</a>
+                    </div>
+                </div>
+
+                <!-- Category Block 2: Orthotics -->
+                <div class="space-y-1">
+                    <button
+                        class="drawer-accordion-btn w-full flex items-center justify-between py-2.5 border-b border-slate-50 hover:text-red-600 cursor-pointer text-left font-bold text-[15px]">
+                        <span class="flex items-center gap-2.5"><i
+                                class="fa-solid fa-bone text-slate-400 text-sm w-4 text-center"></i>Braces & Orthotic
+                            Services</span>
+                        <i
+                            class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div
+                        class="drawer-accordion-panel hidden pl-6 pt-1.5 space-y-1 text-sm text-slate-500 font-semibold border-l-2 border-slate-100">
+                        <a href="#" class="block py-2.5 hover:text-slate-950 transition-colors">Upper limb Orthosis
+                            (Braces & Splints)</a>
+                        <a href="#" class="block py-2.5 hover:text-slate-950 transition-colors">Lower limb Orthosis
+                            (Braces & Splints)</a>
+                        <a href="#" class="block py-2.5 hover:text-slate-950 transition-colors">Neck & Spinal Orthosis
+                            (Braces)</a>
+                        <a href="#" class="block py-2.5 hover:text-slate-950 transition-colors">Compression Care</a>
+                    </div>
+                </div>
+
+                <!-- Category Block 3: Silicone Cosmetic -->
+                <div class="space-y-1">
+                    <button
+                        class="drawer-accordion-btn w-full flex items-center justify-between py-2.5 border-b border-slate-50 hover:text-red-600 cursor-pointer text-left font-bold text-[15px]">
+                        <span class="flex items-center gap-2.5"><i
+                                class="fa-solid fa-sparkles text-slate-400 text-sm w-4 text-center"></i>Cosmetic
+                            Silicone</span>
+                        <i
+                            class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div
+                        class="drawer-accordion-panel hidden pl-6 pt-1.5 space-y-1 text-sm text-slate-500 font-semibold border-l-2 border-slate-100">
+                        <a href="#" class="block py-2.5 hover:text-slate-950 transition-colors">Upper & Lower Limb
+                            Cosmetic Silicone</a>
+                    </div>
+                </div>
+
+                <!-- Standalone Directory Links -->
+                <a href="#"
+                    class="block py-2.5 border-b border-slate-50 hover:text-red-600 transition-colors flex items-center gap-2.5">
+                    <i class="fa-solid fa-shoe-prints text-slate-400 text-sm w-4 text-center"></i>Diabetic Foot Care
+                </a>
+                <a href="#"
+                    class="block py-2.5 border-b border-slate-50 hover:text-red-600 transition-colors flex items-center gap-2.5">
+                    <i class="fa-solid fa-plane-departure text-slate-400 text-sm w-4 text-center"></i>Medical Tourism
+                </a>
+                <a href="#"
+                    class="block py-2.5 border-b border-slate-50 hover:text-red-600 transition-colors flex items-center gap-2.5">
+                    <i class="fa-solid fa-envelope text-slate-400 text-sm w-4 text-center"></i>Contact Us
+                </a>
+
+            </div>
+
+            <!-- Drawer Footer Area Actions Panel -->
+            <div class="p-6 border-t border-slate-100 bg-slate-50/60 space-y-3">
+                <a href="#"
+                    class="w-full inline-flex items-center justify-center bg-gradient-to-r from-red-600 to-rose-600 text-white font-black text-xs uppercase tracking-widest py-4 rounded-xl shadow-md text-center">
+                    Get Consultation
+                </a>
+                <p class="text-[11px] text-center text-slate-400 font-semibold tracking-tight">Raphadon Global
+                    Healthcare Limited</p>
+            </div>
+
+        </div>
+
+        <!-- Semi-Translucent Backdrop Overlay Module -->
+        <div id="directoryOverlay" class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-40 hidden"></div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const globalMenuBtn = document.getElementById("globalMenuBtn");
+            const closeDirectoryBtn = document.getElementById("closeDirectoryBtn");
+            const globalDirectoryDrawer = document.getElementById("globalDirectoryDrawer");
+            const directoryOverlay = document.getElementById("directoryOverlay");
+
+            // 1. Function to Trigger Drawer Display Open
+            if (globalMenuBtn && globalDirectoryDrawer && directoryOverlay) {
+                globalMenuBtn.addEventListener("click", function () {
+                    globalDirectoryDrawer.classList.remove("translate-x-full");
+                    directoryOverlay.classList.remove("hidden");
+                    document.body.style.overflow = "hidden"; // Locks main scroll engine
+                });
+            }
+
+            // 2. Function to Clean Hide and Close Directory Interface
+            const closeDirectory = function () {
+                if (globalDirectoryDrawer && directoryOverlay) {
+                    globalDirectoryDrawer.classList.add("translate-x-full");
+                    directoryOverlay.classList.add("hidden");
+                    document.body.style.overflow = ""; // Restores standard document browsing scroll
+                }
+            };
+
+            if (closeDirectoryBtn) closeDirectoryBtn.addEventListener("click", closeDirectory);
+            if (directoryOverlay) directoryOverlay.addEventListener("click", closeDirectory);
+
+            // 3. Dynamic Accordion Logic for Nested Directories
+            const accordionButtons = document.querySelectorAll(".drawer-accordion-btn");
+
+            accordionButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const panel = this.nextElementSibling;
+                    const arrow = this.querySelector("i.fa-chevron-down");
+
+                    if (panel) {
+                        const isPanelClosed = panel.classList.contains("hidden");
+
+                        // Toggle current state
+                        if (isPanelClosed) {
+                            panel.classList.remove("hidden");
+                            if (arrow) arrow.classList.add("rotate-180");
+                        } else {
+                            panel.classList.add("hidden");
+                            if (arrow) arrow.classList.remove("rotate-180");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+<!-- =========================================================================
+     CREATIVE & MODERN PRODUCT CATEGORY LISTING ENGINE (MAX-W-7XL CONTAINED)
+     ========================================================================= -->
+<section class="w-full bg-slate-50/50 py-20 overflow-hidden text-slate-600">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Category Segment Identity Header -->
+        <div class="space-y-3 border-b border-slate-200/60 pb-8 mb-12">
+            <div class="flex items-center space-x-2">
+                <span class="h-[2px] w-8 bg-red-600 rounded-full"></span>
+                <span class="text-xs font-mono font-black uppercase text-red-600 tracking-widest">Clinical Collection</span>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-none">
+                    Artificial Limbs & <br class="hidden sm:inline" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-600 to-red-700 uppercase tracking-wide">Prosthetics Range</span>
+                </h1>
+                <p class="text-xs sm:text-sm text-slate-400 font-bold tracking-tight bg-white px-4 py-2 rounded-xl border border-slate-100 shadow-xs">
+                    Showing 1 – 4 of 12 Precision Systems
+                </p>
+            </div>
+        </div>
+
+        <!-- Master Split Frame Grid (Filters Column + Items List Column) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- 🛠️ SIDEBAR: CLINICAL FILTERS ARCHITECTURE (Takes 3 of 12 Columns) -->
+            <aside class="lg:col-span-3 space-y-6 lg:sticky lg:top-28">
+                
+                <!-- Filter Section: Categories -->
+                <div class="bg-white border border-slate-100 p-6 rounded-[2rem] shadow-xs space-y-4">
+                    <h4 class="text-xs font-mono font-black text-slate-900 uppercase tracking-widest border-b border-slate-50 pb-2">Range Filter</h4>
+                    <div class="space-y-2 text-xs sm:text-sm font-bold text-slate-600">
+                        <label class="flex items-center gap-2.5 px-3 py-2 bg-slate-50 rounded-xl text-red-600 cursor-pointer">
+                            <input type="radio" name="sub_category" checked class="accent-red-600 w-4 h-4" />
+                            <span>All Prosthetics</span>
+                        </label>
+                        <label class="flex items-center gap-2.5 px-3 py-2 hover:bg-slate-50 rounded-xl transition-colors cursor-pointer">
+                            <input type="radio" name="sub_category" class="accent-red-600 w-4 h-4" />
+                            <span>Lower Limb Prosthesis</span>
+                        </label>
+                        <label class="flex items-center gap-2.5 px-3 py-2 hover:bg-slate-50 rounded-xl transition-colors cursor-pointer">
+                            <input type="radio" name="sub_category" class="accent-red-600 w-4 h-4" />
+                            <span>Upper Limb Prosthesis</span>
+                        </label>
+                        <label class="flex items-center gap-2.5 px-3 py-2 hover:bg-slate-50 rounded-xl transition-colors cursor-pointer">
+                            <input type="radio" name="sub_category" class="accent-red-600 w-4 h-4" />
+                            <span>Bionic Technology</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Filter Section: Material Composition -->
+                <div class="bg-white border border-slate-100 p-6 rounded-[2rem] shadow-xs space-y-4">
+                    <h4 class="text-xs font-mono font-black text-slate-900 uppercase tracking-widest border-b border-slate-50 pb-2">Material Structure</h4>
+                    <div class="space-y-2 text-xs sm:text-sm font-semibold text-slate-500">
+                        <label class="flex items-center gap-2.5 px-2 py-1 cursor-pointer">
+                            <input type="checkbox" checked class="accent-red-600 rounded w-4 h-4" />
+                            <span class="text-slate-700">Carbon Fiber Composite</span>
+                        </label>
+                        <label class="flex items-center gap-2.5 px-2 py-1 cursor-pointer">
+                            <input type="checkbox" class="accent-red-600 rounded w-4 h-4" />
+                            <span class="text-slate-700">Medical Grade Silicone</span>
+                        </label>
+                        <label class="flex items-center gap-2.5 px-2 py-1 cursor-pointer">
+                            <input type="checkbox" class="accent-red-600 rounded w-4 h-4" />
+                            <span class="text-slate-700">High-Grade Titanium</span>
+                        </label>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- 🛍️ MAIN LISTING AREA: CARDS MATRIX TILES (Takes 9 of 12 Columns) -->
+            <main class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                
+                <!-- PRODUCT CARD ITEM 1 -->
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-5 shadow-xs hover:shadow-xl hover:border-red-500/10 transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <!-- Card Render Frame Viewport -->
+                        <div class="relative aspect-4/3 rounded-3xl bg-slate-50 overflow-hidden border border-slate-100">
+                            <span class="absolute top-4 left-4 inline-flex items-center gap-1 py-1 px-3 rounded-lg text-[9px] font-mono font-black uppercase bg-[#031b33] text-white tracking-widest z-10 shadow-xs">
+                                <span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> Bionic Line
+                            </span>
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Product Target Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <!-- Meta Technical Core Descriptions -->
+                        <div class="space-y-1.5 px-1">
+                            <span class="text-[10px] font-mono font-black uppercase text-slate-400 tracking-wider block">Model Reference: RP-740X</span>
+                            <h3 class="text-lg font-black text-slate-900 tracking-tight group-hover:text-red-600 transition-colors">Advanced Lower Limb Bionic Prosthesis</h3>
+                            <p class="text-xs text-slate-400 font-semibold leading-relaxed line-clamp-2">Integrated dynamic hydraulics system with active vacuum lock suspension assemblies for sports movement tracking.</p>
+                        </div>
+                    </div>
+                    <!-- Interaction Action Command Line Hub Buttons -->
+                    <div class="pt-5 mt-4 border-t border-slate-50 flex items-center gap-3">
+                        <a href="#" class="flex-grow inline-flex items-center justify-center bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs uppercase tracking-wider py-3 rounded-xl transition-all text-center">View Specs</a>
+                        <a href="#" class="w-11 h-11 rounded-xl bg-red-50 hover:bg-red-600 text-red-600 hover:text-white flex items-center justify-center text-xs transition-colors shadow-xs" title="Request Quote Setup"><i class="fa-solid fa-calendar-check"></i></a>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD ITEM 2 -->
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-5 shadow-xs hover:shadow-xl hover:border-red-500/10 transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="relative aspect-4/3 rounded-3xl bg-slate-50 overflow-hidden border border-slate-100">
+                            <span class="absolute top-4 left-4 inline-flex items-center gap-1 py-1 px-3 rounded-lg text-[9px] font-mono font-black uppercase bg-[#031b33] text-white tracking-widest z-10 shadow-xs">
+                                <span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> Intelligent Elite
+                            </span>
+                            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Product Target Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="space-y-1.5 px-1">
+                            <span class="text-[10px] font-mono font-black uppercase text-slate-400 tracking-wider block">Model Reference: RP-910B</span>
+                            <h3 class="text-lg font-black text-slate-900 tracking-tight group-hover:text-red-600 transition-colors">Myoelectric Multi-Grasp Upper Extremity</h3>
+                            <p class="text-xs text-slate-400 font-semibold leading-relaxed line-clamp-2">Proportional multi-finger grasp sequencing with high-definition dynamic physiological feedback matrix controls.</p>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-slate-50 flex items-center gap-3">
+                        <a href="#" class="flex-grow inline-flex items-center justify-center bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs uppercase tracking-wider py-3 rounded-xl transition-all text-center">View Specs</a>
+                        <a href="#" class="w-11 h-11 rounded-xl bg-red-50 hover:bg-red-600 text-red-600 hover:text-white flex items-center justify-center text-xs transition-colors shadow-xs" title="Request Quote Setup"><i class="fa-solid fa-calendar-check"></i></a>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD ITEM 3 -->
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-5 shadow-xs hover:shadow-xl hover:border-red-500/10 transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="relative aspect-4/3 rounded-3xl bg-slate-50 overflow-hidden border border-slate-100">
+                            <span class="absolute top-4 left-4 inline-flex items-center gap-1 py-1 px-3 rounded-lg text-[9px] font-mono font-black uppercase bg-[#031b33] text-white tracking-widest z-10 shadow-xs">
+                                <span class="w-1 h-1 rounded-full bg-orange-500 animate-pulse"></span> Custom Form
+                            </span>
+                            <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e901a?auto=format&fit=crop&w=600&q=80" alt="Product Target Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="space-y-1.5 px-1">
+                            <span class="text-[10px] font-mono font-black uppercase text-slate-400 tracking-wider block">Model Reference: RP-520P</span>
+                            <h3 class="text-lg font-black text-slate-900 tracking-tight group-hover:text-red-600 transition-colors">Dynamic Microprocessor Knee Core System</h3>
+                            <p class="text-xs text-slate-400 font-semibold leading-relaxed line-clamp-2">Real-time gate sensing algorithm setups with high mechanical yield boundaries for active running patterns.</p>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-slate-50 flex items-center gap-3">
+                        <a href="#" class="flex-grow inline-flex items-center justify-center bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs uppercase tracking-wider py-3 rounded-xl transition-all text-center">View Specs</a>
+                        <a href="#" class="w-11 h-11 rounded-xl bg-red-50 hover:bg-red-600 text-red-600 hover:text-white flex items-center justify-center text-xs transition-colors shadow-xs" title="Request Quote Setup"><i class="fa-solid fa-calendar-check"></i></a>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD ITEM 4 -->
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-5 shadow-xs hover:shadow-xl hover:border-red-500/10 transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="relative aspect-4/3 rounded-3xl bg-slate-50 overflow-hidden border border-slate-100">
+                            <span class="absolute top-4 left-4 inline-flex items-center gap-1 py-1 px-3 rounded-lg text-[9px] font-mono font-black uppercase bg-[#031b33] text-white tracking-widest z-10 shadow-xs">
+                                <span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> Ultra Weight
+                            </span>
+                            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Product Target Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="space-y-1.5 px-1">
+                            <span class="text-[10px] font-mono font-black uppercase text-slate-400 tracking-wider block">Model Reference: RP-410T</span>
+                            <h3 class="text-lg font-black text-slate-900 tracking-tight group-hover:text-red-600 transition-colors">Transtibial Carbon Fibre Foot Unit</h3>
+                            <p class="text-xs text-slate-400 font-semibold leading-relaxed line-clamp-2">High energy-return flex matrices constructed for multi-axial stability across unstable outdoor terrains.</p>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-slate-50 flex items-center gap-3">
+                        <a href="#" class="flex-grow inline-flex items-center justify-center bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs uppercase tracking-wider py-3 rounded-xl transition-all text-center">View Specs</a>
+                        <a href="#" class="w-11 h-11 rounded-xl bg-red-50 hover:bg-red-600 text-red-600 hover:text-white flex items-center justify-center text-xs transition-colors shadow-xs" title="Request Quote Setup"><i class="fa-solid fa-calendar-check"></i></a>
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+</section>
+    <footer class="bg-[#121824] text-slate-400 border-t border-slate-800/60 relative overflow-hidden pt-24 pb-8">
+
+        <!-- Soft Red Ambient Tech Glow -->
+        <div
+            class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-red-600/5 to-transparent rounded-full blur-[140px] pointer-events-none">
+        </div>
+        <div class="absolute top-0 left-12 w-64 h-64 bg-slate-900/20 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+            <!-- TOP ROW: Actionable Contact Cards (White Text / Soft Surface on Dark Slate) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12 border-b border-slate-800/50">
+
+                <!-- Call Us Box -->
+                <div
+                    class="flex items-center space-x-5 p-6 rounded-2xl bg-[#1a2333]/60 border border-slate-800/50 hover:border-red-500/30 transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-lg group-hover:bg-red-600 group-hover:text-white transition-colors duration-300 shadow-xs">
+                        <!-- Font Awesome Phone Icon -->
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <span
+                            class="text-xs font-mono font-bold uppercase text-slate-500 block mb-0.5 tracking-wider">Call
+                            Us</span>
+                        <a href="tel:+2349023850034"
+                            class="text-lg font-extrabold text-white hover:text-red-400 transition-colors tracking-tight">+234
+                            90238 50034</a>
+                    </div>
+                </div>
+
+                <!-- Mail Us Box -->
+                <div
+                    class="flex items-center space-x-5 p-6 rounded-2xl bg-[#1a2333]/60 border border-slate-800/50 hover:border-red-500/30 transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-lg group-hover:bg-red-600 group-hover:text-white transition-colors duration-300 shadow-xs">
+                        <!-- Font Awesome Envelope Icon -->
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <span
+                            class="text-xs font-mono font-bold uppercase text-slate-500 block mb-0.5 tracking-wider">Mail
+                            Us</span>
+                        <a href="mailto:support@raphadon.org"
+                            class="text-lg font-extrabold text-white hover:text-red-400 transition-colors tracking-tight">support@raphadon.org</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MIDDLE ROW: Informational Navigation Matrix -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 pt-16 pb-16">
+
+                <!-- Column 1: Quick Links -->
+                <div class="lg:col-span-3 space-y-5">
+                    <h4
+                        class="text-base font-semibold  text-red-400 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-400">
+                        Quick Links
+                    </h4>
+                    <ul class="space-y-3 pt-3 text-sm font-semibold text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> Home</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> About us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> Testimonials</a>
+                        </li>
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> Medical
+                                Tourism</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i> Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Our Products -->
+                <div class="lg:col-span-4 space-y-6">
+                    <h4
+                        class="text-base font-semibold  text-red-400 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-400">
+                        Our Products
+                    </h4>
+                    <ul class="space-y-3 pt-3 text-sm font-semibold text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Artificial Limbs / Prosthetic
+                                Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Braces and Splints / Orthotic
+                                Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Silicone Prosthesis / Cosmetic
+                                Restoration</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Diabetic Foot Care / Foot Care
+                                Services</a></li>
+                    </ul>
+
+                    <!-- Downloads Portfolio Button -->
+                    <div class="pt-2">
+                        <a href="#"
+                            class="inline-flex items-center space-x-3 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold text-xs uppercase tracking-wider px-5 py-3.5 rounded-xl transition-all shadow-md group">
+                            <!-- Font Awesome Download Icon -->
+                            <i
+                                class="fa-solid fa-arrow-down-to-line group-hover:translate-y-0.5 transition-transform"></i>
+                            <span>Downloads Portfolio</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 3: Contact Details -->
+                <div class="lg:col-span-3 space-y-5">
+                    <h4
+                        class="text-base font-semibold text-red-400 tracking-widest relative after:absolute after:bottom-[-6px] after:left-0 after:w-6 after:h-[2px] after:bg-red-400">
+                        Contact Us
+                    </h4>
+                    <div class="pt-3 text-xs sm:text-sm font-medium text-slate-400 space-y-4 leading-relaxed">
+                        <p class="text-white font-extrabold">Raphadon Global Healthcare Limited,</p>
+                        <div class="flex items-start space-x-2.5 text-slate-500">
+                            <!-- Font Awesome Location Dot Icon -->
+                            <i class="fa-solid fa-location-dot mt-1 text-slate-600 shrink-0"></i>
+                            <p class="font-medium">Amma House, Plot 432, Ground Floor, Opp National Hospital, Yakubu J
+                                Pam Street, Central Business District, Abuja, Nigeria.</p>
+                        </div>
+                        <p class="font-bold text-zinc-300 flex items-center gap-2"><i
+                                class="fa-solid fa-phone text-xs text-slate-500"></i> +234 90238 50034</p>
+                        <p class="font-bold text-zinc-300 flex items-center gap-2"><i
+                                class="fa-solid fa-envelope text-xs text-slate-500"></i> info@raphadon.org</p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Accounts & Locations Matrix -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div>
+                        <h4 class="text-base font-semibold text-red-400 tracking-widest block mb-4">Follow Us On</h4>
+                        <div class="flex items-center space-x-2">
+                            <!-- Font Awesome Social Icons -->
+                            <a href="#"
+                                class="w-9 h-9 bg-[#1a2333] hover:bg-red-600 text-slate-300 hover:text-white rounded-full flex items-center justify-center transition-all text-sm border border-slate-800/40"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"
+                                class="w-9 h-9 bg-[#1a2333] hover:bg-red-600 text-slate-300 hover:text-white rounded-full flex items-center justify-center transition-all text-sm border border-slate-800/40"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"
+                                class="w-9 h-9 bg-[#1a2333] hover:bg-red-600 text-slate-300 hover:text-white rounded-full flex items-center justify-center transition-all text-sm border border-slate-800/40"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="#"
+                                class="w-9 h-9 bg-[#1a2333] hover:bg-red-600 text-slate-300 hover:text-white rounded-full flex items-center justify-center transition-all text-sm border border-slate-800/40"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Strategic Pill Locations Array -->
+                    <div class="space-y-3 pt-2">
+                        <h5
+                            class="text-xs font-extrabold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                            <i class="fa-solid fa-map text-[10px] text-red-400"></i> Our Locations:</h5>
+                        <div
+                            class="text-[11px] font-bold text-slate-500 leading-relaxed flex flex-wrap gap-x-2 gap-y-1">
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Lagos</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Abia</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Adamawa</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Akwa Ibom</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Anambra</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Bauchi</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Bayelsa</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Benue</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Borno</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Cross River</span><span
+                                class="text-slate-800">|</span>
+                            <span class="hover:text-red-400 transition-colors cursor-pointer">Delta</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BOTTOM FOOTER NOTE: Trademark-Synced Copyright Stamp Bar -->
+            <div
+                class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center text-sm text-slate-500 font-medium space-y-3 sm:space-y-0">
+                <p>&copy; 2026 Raphadon Global Healthcare Limited. <span class="text-slate-600 font-normal">helps to
+                        live better&reg;</span></p>
+                <div class="flex space-x-6 text-slate-500 font-semibold">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" style="z-index: 99999 !important;"
+        class="fixed bottom-8 right-8 w-12 h-12 rounded-xl bg-red-600 text-white border border-slate-700/50 flex items-center justify-center shadow-2xl cursor-pointer opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-50 hover:bg-[#031b33] hover:scale-105 group"
+        title="Scroll to Top">
+        <i class="fa-solid fa-arrow-up text-base group-hover:-translate-y-0.5 transition-transform"></i>
+    </button>
+
+
+    <!-- Swiper JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.mainHeroSwiper', {
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
+
+</body>
+
+</html>
