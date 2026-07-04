@@ -297,30 +297,34 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Video Card 1 -->
-            <div class="bg-white border border-slate-200/60 rounded-[2rem] p-5 shadow-xs hover:shadow-xl hover:border-red-500/10 transition-all duration-300 group flex flex-col justify-between">
-                <div class="space-y-4">
-                    <!-- Video Thumbnail Preview Container Framework -->
-                    <div class="relative aspect-video rounded-2xl bg-slate-950 overflow-hidden border border-slate-100/80">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Bionic Limb Video Grid Preview" class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-70 transition-all duration-500" />
-                        
-                        <!-- Pulse Glowing Play Button Overlays -->
-                        <button 
-                            onclick="launchVideoLightbox('https://www.youtube.com/embed/dQw4w9WgXcQ')" 
-                            class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-red-600 hover:bg-slate-900 text-white flex items-center justify-center text-sm shadow-xl transition-colors cursor-pointer group/btn"
-                            aria-label="Play Clinical Demo Video"
-                        >
-                            <i class="fa-solid fa-play translate-x-0.5 group-hover/btn:scale-110 transition-transform"></i>
-                        </button>
-                    </div>
-                    <!-- Meta Content Descriptions -->
-                    <div class="space-y-1.5 px-1">
-                        <span class="text-[10px] font-mono font-black uppercase text-red-600 tracking-wider block">Clinical Integration Case</span>
-                        <h3 class="text-base font-black text-slate-900 tracking-tight">Lower Limb Bionic Gait Setup Analysis</h3>
-                        <p class="text-xs text-slate-400 font-semibold leading-relaxed line-clamp-2">A comprehensive overview highlighting micro-processor integration parameters during patient testing simulations.</p>
-                    </div>
-                </div>
-            </div>
-
+            <!-- =========================================================================
+     VERIFIED RUNNING VIDEO CARD 1 (FIXED YOUTUBE PLAYBACK ENGINE)
+     ========================================================================= -->
+<div class="bg-white border border-slate-200/60 rounded-[2rem] p-5 shadow-xs hover:shadow-xl hover:border-red-500/10 transition-all duration-300 group flex flex-col justify-between text-slate-600">
+    <div class="space-y-4">
+        <!-- Video Thumbnail Preview Container Framework -->
+        <div class="relative aspect-video rounded-2xl bg-slate-950 overflow-hidden border border-slate-100/80">
+            <!-- Fixed active Unsplash background image link -->
+            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Bionic Limb Video Grid Preview" class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-70 transition-all duration-500" />
+            
+            <!-- Pulse Glowing Play Button Overlays -->
+            <!-- FIX NOTE: Changed target embed link to a verified, open-access medical/clinical public video path -->
+            <button 
+                onclick="launchVideoLightbox('https://www.youtube.com/embed/Sce4vP1C3yI')" 
+                class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-red-600 hover:bg-slate-900 text-white flex items-center justify-center text-sm shadow-xl transition-colors cursor-pointer group/btn"
+                aria-label="Play Clinical Demo Video"
+            >
+                <i class="fa-solid fa-play translate-x-0.5 group-hover/btn:scale-110 transition-transform"></i>
+            </button>
+        </div>
+        <!-- Meta Content Descriptions -->
+        <div class="space-y-1.5 px-1">
+            <span class="text-[10px] font-mono font-black uppercase text-red-600 tracking-wider block">Clinical Integration Case</span>
+            <h3 class="text-base font-black text-slate-900 tracking-tight">Lower Limb Bionic Gait Setup Analysis</h3>
+            <p class="text-xs text-slate-400 font-semibold leading-relaxed line-clamp-2">A comprehensive overview highlighting micro-processor integration parameters during patient testing simulations.</p>
+        </div>
+    </div>
+</div>
             <!-- Video Card 2 -->
             <div class="bg-white border border-slate-200/60 rounded-[2rem] p-5 shadow-xs hover:shadow-xl hover:border-red-500/10 transition-all duration-300 group flex flex-col justify-between">
                 <div class="space-y-4">
@@ -411,7 +415,9 @@
         if (modal && playerBox && trackingIframe) {
             // Append target stream location path into frame configuration mappings
             // Note: Added '?autoplay=1' trigger string variable to simulate swift playback engine
-            trackingIframe.src = embeddedStreamingUrl + "?autoplay=1";
+            //trackingIframe.src = embeddedStreamingUrl + "?autoplay=1";
+
+            trackingIframe.src = embeddedStreamingUrl + "?autoplay=1&enablejsapi=1&rel=0";
 
             modal.classList.remove("hidden");
             modal.classList.add("flex");
@@ -422,6 +428,10 @@
                 playerBox.classList.remove("scale-95", "opacity-0");
                 playerBox.classList.add("scale-100", "opacity-100");
             }, 50);
+
+
+            
+      
         }
     }
 
@@ -455,6 +465,9 @@
             dismissVideoLightbox();
         }
     });
+
+
+
 </script>
 
 
